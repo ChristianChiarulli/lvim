@@ -5,9 +5,9 @@ O.completion.autocomplete = true
 O.colorscheme = "darkplus"
 O.default_options.wrap = false
 O.default_options.timeoutlen = 100
+
 -- keymappings
 O.keys.leader_key = "space"
-
 vim.cmd [[
 nnoremap Y y$
 
@@ -27,11 +27,14 @@ vnoremap p "_dP
 nnoremap gp a<CR><Esc>PkJxJx
 ]]
 
+-- LSP
+O.lsp.diagnostics.virtual_text = false
+
 -- Builtins
 O.plugin.dashboard.active = true
 O.plugin.terminal.active = true
 
--- if you don't want all the parsers change this to a table of the ones you want
+-- Treesitter
 O.treesitter.ensure_installed = "all"
 O.treesitter.ignore_install = { "haskell" }
 O.treesitter.highlight.enabled = true
