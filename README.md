@@ -1,2 +1,3 @@
-# lvim
-My lv-config for LunarVim
+# My LunarVim Config
+
+
