@@ -8,6 +8,25 @@ O.default_options.timeoutlen = 100
 -- keymappings
 O.keys.leader_key = "space"
 
+vim.cmd [[
+nnoremap Y y$
+
+" paste on cursor
+nnoremap gP i<CR><Esc>PkJxJx
+
+nnoremap gp a<CR><Esc>PkJxJx
+
+" delete without yanking
+"nnoremap <leader>d "_d
+"vnoremap <leader>d "_d
+
+" replace currently selected text with default register
+" without yanking it
+vnoremap p "_dP
+
+nnoremap gp a<CR><Esc>PkJxJx
+]]
+
 -- Builtins
 O.plugin.dashboard.active = true
 O.plugin.terminal.active = true
@@ -42,6 +61,15 @@ O.user_plugins = {
     end,
     event = "InsertEnter",
   },
+  {
+    "unblevable/quick-scope",
+    config = function()
+      vim.cmd [[
+      let g:qs_highlight_on_keys = ['f', 'F', 't', 'T']
+      ]]
+    end,
+  },
+
   {
     "ruifm/gitlinker.nvim",
     event = "BufRead",
