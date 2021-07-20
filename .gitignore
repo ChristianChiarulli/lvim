@@ -40,4 +40,4 @@ luac.out
 *.hex
 
 # LunarVim
-plugins/
+plugin/
