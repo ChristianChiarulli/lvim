@@ -39,6 +39,7 @@ O.treesitter.ensure_installed = "all"
 O.treesitter.ignore_install = { "haskell" }
 O.treesitter.highlight.enabled = true
 O.treesitter.playground.enable = true
+O.treesitter.matchup.enable = true
 O.treesitter.autotag.enable = true
 
 -- python
