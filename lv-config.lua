@@ -3,8 +3,11 @@ O.format_on_save = true
 O.lint_on_save = true
 O.completion.autocomplete = true
 O.colorscheme = "darkplus"
-O.default_options.wrap = false
-O.default_options.timeoutlen = 100
+
+-- O.default_options.cursorline = true
+vim.opt.cursorline = true
+
+-- vim.opt.wrap = true
 
 -- keymappings
 O.keys.leader_key = "space"
@@ -43,8 +46,6 @@ O.treesitter.matchup.enable = true
 O.treesitter.autotag.enable = true
 
 -- python
-O.lang.python.diagnostics.virtual_text = true
-O.lang.python.analysis.use_library_code_types = true
 -- To change default formatter from yapf to black
 -- O.lang.python.formatter.exe = "black"
 -- O.lang.python.formatter.args = {"-"}
@@ -54,8 +55,10 @@ O.lang.python.analysis.use_library_code_types = true
 -- javascript
 O.lang.tsserver.linter = nil
 
+O.lang.rust.rust_tools.active = true
+
 -- Additional Plugins
-O.user_plugins = {
+O.plugins = {
   { "lunarvim/colorschemes" },
   { "folke/tokyonight.nvim" },
   {
@@ -161,6 +164,7 @@ O.user_plugins = {
     event = "BufRead",
   },
 }
+
 
 -- Autocommands (https://neovim.io/doc/user/autocmd.html)
 -- O.user_autocommands = {{ "BufWinEnter", "*", "echo \"hi again\""}}
