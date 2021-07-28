@@ -1,7 +1,7 @@
 -- general
+O = lvim
 O.format_on_save = true
 O.lint_on_save = true
-O.completion.autocomplete = true
 O.colorscheme = "darkplus"
 
 -- O.default_options.cursorline = true
@@ -10,7 +10,7 @@ vim.opt.cursorline = true
 -- vim.opt.wrap = true
 
 -- keymappings
-O.keys.leader_key = "space"
+O.leader = "space"
 vim.cmd [[
 nnoremap Y y$
 
@@ -34,16 +34,10 @@ nnoremap gp a<CR><Esc>PkJxJx
 O.lsp.diagnostics.virtual_text = false
 
 -- Builtins
-O.plugin.dashboard.active = true
-O.plugin.terminal.active = true
+O.builtin.dashboard.active = true
+O.builtin.terminal.active = true
 
 -- Treesitter
-O.treesitter.ensure_installed = "all"
-O.treesitter.ignore_install = { "haskell" }
-O.treesitter.highlight.enabled = true
-O.treesitter.playground.enable = true
-O.treesitter.matchup.enable = true
-O.treesitter.autotag.enable = true
 
 -- python
 -- To change default formatter from yapf to black
@@ -51,11 +45,6 @@ O.treesitter.autotag.enable = true
 -- O.lang.python.formatter.args = {"-"}
 -- https://github.com/mfussenegger/nvim-lint#available-linters
 -- O.lang.python.linters = { "flake8", "pylint", "mypy", ... }
-
--- javascript
-O.lang.tsserver.linter = nil
-
-O.lang.rust.rust_tools.active = true
 
 -- Additional Plugins
 O.plugins = {
@@ -164,7 +153,6 @@ O.plugins = {
     event = "BufRead",
   },
 }
-
 
 -- Autocommands (https://neovim.io/doc/user/autocmd.html)
 -- O.user_autocommands = {{ "BufWinEnter", "*", "echo \"hi again\""}}
