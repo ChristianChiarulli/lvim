@@ -1,8 +1,7 @@
 -- general
-O = lvim
-O.format_on_save = true
-O.lint_on_save = true
-O.colorscheme = "darkplus"
+lvim.format_on_save = true
+lvim.lint_on_save = true
+lvim.colorscheme = "darkplus"
 
 -- O.default_options.cursorline = true
 vim.opt.cursorline = true
@@ -10,14 +9,14 @@ vim.opt.cursorline = true
 -- vim.opt.wrap = true
 
 -- keymappings
-O.leader = "space"
+lvim.leader = "space"
 vim.cmd [[
 nnoremap Y y$
 
 " paste on cursor
-nnoremap gP i<CR><Esc>PkJxJx
+"nnoremap gP i<CR><Esc>PkJxJx
 
-nnoremap gp a<CR><Esc>PkJxJx
+"nnoremap gp a<CR><Esc>PkJxJx
 
 " delete without yanking
 "nnoremap <leader>d "_d
@@ -26,30 +25,21 @@ nnoremap gp a<CR><Esc>PkJxJx
 " replace currently selected text with default register
 " without yanking it
 vnoremap p "_dP
-
-nnoremap gp a<CR><Esc>PkJxJx
 ]]
 
 -- LSP
-O.lsp.diagnostics.virtual_text = false
+lvim.lsp.diagnostics.virtual_text = false
+lvim.lsp.override = { "java" }
 
 -- Builtins
-O.builtin.dashboard.active = true
-O.builtin.terminal.active = true
+lvim.builtin.dashboard.active = true
+lvim.builtin.terminal.active = true
 
 -- Treesitter
 
--- python
--- To change default formatter from yapf to black
--- O.lang.python.formatter.exe = "black"
--- O.lang.python.formatter.args = {"-"}
--- https://github.com/mfussenegger/nvim-lint#available-linters
--- O.lang.python.linters = { "flake8", "pylint", "mypy", ... }
-
 -- Additional Plugins
-O.plugins = {
+lvim.plugins = {
   { "lunarvim/colorschemes" },
-  { "folke/tokyonight.nvim" },
   {
     "ray-x/lsp_signature.nvim",
     config = function()
@@ -57,6 +47,7 @@ O.plugins = {
     end,
     event = "InsertEnter",
   },
+  { "mfussenegger/nvim-jdtls" },
   {
     "unblevable/quick-scope",
     config = function()
