@@ -143,13 +143,13 @@ lvim.plugins = {
       require("user.zen").config()
     end,
   },
-  {
-    "folke/twilight.nvim",
-    config = function()
-      require("user.twilight").config()
-    end,
-    cmd = "ZenMode",
-  },
+  -- {
+  --   "folke/twilight.nvim",
+  --   config = function()
+  --     require("user.twilight").config()
+  --   end,
+  --   -- cmd = "ZenMode",
+  -- },
   {
     "simrat39/symbols-outline.nvim",
     cmd = "SymbolsOutline",
