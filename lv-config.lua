@@ -31,6 +31,10 @@ lvim.lsp.override = { "java" }
 lvim.builtin.dashboard.active = true
 lvim.builtin.terminal.active = true
 
+-- lvim.builtin.nvimtree.auto_open = 0
+-- vim.g.nvim_tree_disable_netrw = 0
+-- vim.g.nvim_tree_hijack_netrw = 0
+
 -- Treesitter
 lvim.builtin.treesitter.autotag.enable = true
 lvim.builtin.treesitter.playground.enable = true
@@ -52,6 +56,14 @@ lvim.plugins = {
       require "user.quickscope"
     end,
   },
+  {
+    "kevinhwang91/rnvimr",
+    cmd = "Rnvimr",
+    config = function()
+      require "user.rnvimr"
+    end,
+  },
+
   {
     "ruifm/gitlinker.nvim",
     event = "BufRead",
