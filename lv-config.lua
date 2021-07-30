@@ -26,6 +26,7 @@ vnoremap p "_dP
 -- LSP
 lvim.lsp.diagnostics.virtual_text = false
 lvim.lsp.override = { "java" }
+require("user.json_schemas").setup()
 
 -- Builtins
 lvim.builtin.dashboard.active = true
