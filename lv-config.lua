@@ -21,6 +21,11 @@ nnoremap Y y$
 " replace currently selected text with default register
 " without yanking it
 vnoremap p "_dP
+
+
+"search current word
+"  search in current file
+nnoremap <leader>rp viw:lua require('spectre').open_file_search()<cr>
 ]]
 
 -- LSP
@@ -30,6 +35,16 @@ lvim.lsp.override = { "java" }
 -- Builtins
 lvim.builtin.dashboard.active = true
 lvim.builtin.terminal.active = true
+
+-- Whichkey
+lvim.builtin.which_key.mappings.l.d = { "<cmd>TroubleToggle<cr>", "Trouble" }
+lvim.builtin.which_key.mappings.l.o = { "<cmd>SymbolsOutline<cr>", "Outline" }
+lvim.builtin.which_key.mappings["r"] = {
+  name = "Replace",
+  r = { "<cmd>lua require('spectre').open()<cr>", "Replace" },
+  w = { "<cmd>lua require('spectre').open_visual({select_word=true})<cr>", "Replace Word" },
+  f = { "<cmd>lua require('spectre').open_file_search()<cr>", "Replace Buffer" },
+}
 
 -- lvim.builtin.nvimtree.auto_open = 0
 -- vim.g.nvim_tree_disable_netrw = 0
@@ -109,6 +124,28 @@ lvim.plugins = {
     config = function()
       require("user.colorizer").config()
     end,
+  },
+  {
+    "nvim-telescope/telescope-project.nvim",
+    event = "BufWinEnter",
+    setup = function()
+      vim.cmd [[packadd telescope.nvim]]
+    end,
+  },
+  {
+    "windwp/nvim-spectre",
+    event = "BufRead",
+    config = function()
+      require("user.spectre").config()
+    end,
+  },
+  {
+    "simrat39/symbols-outline.nvim",
+    cmd = "SymbolsOutline",
+  },
+  {
+    "folke/trouble.nvim",
+    cmd = "TroubleToggle",
   },
   {
     "kevinhwang91/nvim-bqf",
