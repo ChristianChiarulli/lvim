@@ -36,6 +36,7 @@ lvim.builtin.terminal.active = true
 lvim.builtin.which_key.mappings.l.d = { "<cmd>TroubleToggle<cr>", "Diagnostics" }
 lvim.builtin.which_key.mappings.l.R = { "<cmd>TroubleToggle lsp_references<cr>", "References" }
 lvim.builtin.which_key.mappings.l.o = { "<cmd>SymbolsOutline<cr>", "Outline" }
+lvim.builtin.which_key.mappings["z"] = { "<cmd>ZenMode<cr>", "Zen" }
 lvim.builtin.which_key.mappings["r"] = {
   name = "Replace",
   r = { "<cmd>lua require('spectre').open()<cr>", "Replace" },
@@ -95,13 +96,13 @@ lvim.plugins = {
     event = "BufRead",
     requires = "mattn/webapi-vim",
   },
-  {
-    "andymass/vim-matchup",
-    event = "CursorMoved",
-    config = function()
-      require "user.matchup"
-    end,
-  },
+  -- {
+  --   "andymass/vim-matchup",
+  --   event = "CursorMoved",
+  --   config = function()
+  --     require "user.matchup"
+  --   end,
+  -- },
   {
     "nacro90/numb.nvim",
     event = "BufRead",
@@ -135,6 +136,19 @@ lvim.plugins = {
     config = function()
       require("user.spectre").config()
     end,
+  },
+  {
+    "folke/zen-mode.nvim",
+    config = function()
+      require("user.zen").config()
+    end,
+  },
+  {
+    "folke/twilight.nvim",
+    config = function()
+      require("user.twilight").config()
+    end,
+    cmd = "ZenMode",
   },
   {
     "simrat39/symbols-outline.nvim",
