@@ -162,6 +162,10 @@ lvim.plugins = {
     cmd = "SymbolsOutline",
   },
   {
+    "metakirby5/codi.vim",
+    cmd = "Codi",
+  },
+  {
     "folke/trouble.nvim",
     cmd = "TroubleToggle",
   },
