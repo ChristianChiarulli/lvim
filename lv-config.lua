@@ -45,7 +45,7 @@ lvim.builtin.which_key.mappings["r"] = {
 }
 lvim.builtin.which_key.mappings.f = { "<cmd>lua require('lir.float').toggle()<cr>", "Files" }
 
--- lvim.builtin.nvimtree.auto_open = 0
+lvim.builtin.nvimtree.auto_open = 0
 -- vim.g.nvim_tree_disable_netrw = 0
 -- vim.g.nvim_tree_hijack_netrw = 0
 
