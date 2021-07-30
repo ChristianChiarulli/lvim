@@ -6,15 +6,12 @@ vim.opt.wrap = false
 
 -- keymappings
 lvim.leader = "space"
-lvim.keys.normal_mode = {
-    { "<esc><esc>", "<cmd>nohlsearch<cr>" },
-    { "Y", "y$" },
-    { "Y", "y$" },
-}
-lvim.keys.visual_mode = {
-  {"p", "\"_dP"}
 
-}
+vim.cmd[[
+  nnoremap <esc><esc> <cmd>nohlsearch<cr>
+  nnoremap Y y$ 
+  vnoremap p "_dP
+]]
 -- " paste on cursor
 -- "nnoremap gP i<CR><Esc>PkJxJx
 -- "nnoremap gp a<CR><Esc>PkJxJx
@@ -54,7 +51,24 @@ lvim.builtin.treesitter.autotag.enable = true
 lvim.builtin.treesitter.playground.enable = true
 
 -- Language Specific
+
+--json
 lvim.lang.json.formatter.exe = "prettier"
+
+-- python
+lvim.lang.python.formatters = {
+  {
+    exe = "black",
+    args = {}
+  }
+}
+
+lvim.lang.python.linters = {
+  {
+    exe = "flake8",
+    args = {}
+  }
+}
 
 -- Additional Plugins
 lvim.plugins = {
