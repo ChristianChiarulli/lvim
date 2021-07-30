@@ -1,27 +1,26 @@
 -- general
 lvim.format_on_save = false
 lvim.colorscheme = "darkplus"
-
+lvim.transparent_window = false
 vim.opt.wrap = false
 
 -- keymappings
 lvim.leader = "space"
-vim.cmd [[
-nnoremap Y y$
+lvim.keys.normal_mode = {
+    { "<esc><esc>", "<cmd>nohlsearch<cr>" },
+    { "Y", "y$" },
+    { "Y", "y$" },
+}
+lvim.keys.visual_mode = {
+  {"p", "\"_dP"}
 
-" paste on cursor
-"nnoremap gP i<CR><Esc>PkJxJx
-
-"nnoremap gp a<CR><Esc>PkJxJx
-
-" delete without yanking
-"nnoremap <leader>d "_d
-"vnoremap <leader>d "_d
-
-" replace currently selected text with default register
-" without yanking it
-vnoremap p "_dP
-]]
+}
+-- " paste on cursor
+-- "nnoremap gP i<CR><Esc>PkJxJx
+-- "nnoremap gp a<CR><Esc>PkJxJx
+-- " delete without yanking
+-- "nnoremap <leader>d "_d
+-- "vnoremap <leader>d "_d
 
 -- LSP
 lvim.lsp.diagnostics.virtual_text = false
