@@ -21,11 +21,6 @@ nnoremap Y y$
 " replace currently selected text with default register
 " without yanking it
 vnoremap p "_dP
-
-
-"search current word
-"  search in current file
-nnoremap <leader>rp viw:lua require('spectre').open_file_search()<cr>
 ]]
 
 -- LSP
