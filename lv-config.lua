@@ -188,5 +188,6 @@ lvim.plugins = {
   },
 }
 
+-- TODO: q quits in spectr_panel ft
 -- Autocommands (https://neovim.io/doc/user/autocmd.html)
 -- O.user_autocommands = {{ "BufWinEnter", "*", "echo \"hi again\""}}
