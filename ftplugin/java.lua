@@ -1,6 +1,6 @@
-if require("utils").check_lsp_client_active "jdt.ls" then
-  return
-end
+-- if require("utils").check_lsp_client_active "jdt.ls" then
+--   return
+-- end
 
 -- find_root looks for parent directories relative to the current buffer containing one of the given arguments.
 if vim.fn.has "mac" == 1 then
