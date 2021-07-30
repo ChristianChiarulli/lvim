@@ -32,7 +32,8 @@ lvim.builtin.dashboard.active = true
 lvim.builtin.terminal.active = true
 
 -- Whichkey
-lvim.builtin.which_key.mappings.l.d = { "<cmd>TroubleToggle<cr>", "Trouble" }
+lvim.builtin.which_key.mappings.l.d = { "<cmd>TroubleToggle<cr>", "Diagnostics" }
+lvim.builtin.which_key.mappings.l.R = { "<cmd>TroubleToggle lsp_references<cr>", "References" }
 lvim.builtin.which_key.mappings.l.o = { "<cmd>SymbolsOutline<cr>", "Outline" }
 lvim.builtin.which_key.mappings["r"] = {
   name = "Replace",
