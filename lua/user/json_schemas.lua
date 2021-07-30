@@ -1,3 +1,4 @@
+-- https://www.schemastore.org/json/
 local M = {}
 
 M.setup = function()
