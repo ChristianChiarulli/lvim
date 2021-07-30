@@ -1,4 +1,4 @@
-if require("utils").check_lsp_client_active "jdtls" then
+if require("utils").check_lsp_client_active "jdt.ls" then
   return
 end
 

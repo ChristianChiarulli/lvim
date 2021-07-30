@@ -1,12 +1,8 @@
 -- general
 lvim.format_on_save = true
-lvim.lint_on_save = true
 lvim.colorscheme = "darkplus"
 
--- O.default_options.cursorline = true
-vim.opt.cursorline = true
-
--- vim.opt.wrap = true
+vim.opt.wrap = false
 
 -- keymappings
 lvim.leader = "space"
@@ -36,54 +32,38 @@ lvim.builtin.dashboard.active = true
 lvim.builtin.terminal.active = true
 
 -- Treesitter
+lvim.builtin.treesitter.autotag.enable = true
+lvim.builtin.treesitter.playground.enable = true
 
 -- Additional Plugins
 lvim.plugins = {
   { "lunarvim/colorschemes" },
+  { "mfussenegger/nvim-jdtls" },
   {
     "ray-x/lsp_signature.nvim",
-    config = function()
-      require("lsp_signature").on_attach()
-    end,
     event = "InsertEnter",
+    config = function()
+      require("user.lsp_signature").config()
+    end,
   },
-  { "mfussenegger/nvim-jdtls" },
   {
     "unblevable/quick-scope",
     config = function()
-      vim.cmd [[
-      let g:qs_highlight_on_keys = ['f', 'F', 't', 'T']
-      ]]
+      require "user.quickscope"
     end,
   },
-
   {
     "ruifm/gitlinker.nvim",
     event = "BufRead",
     config = function()
-      require("gitlinker").setup {
-        opts = {
-          -- remote = 'github', -- force the use of a specific remote
-          -- adds current line nr in the url for normal mode
-          add_current_line_on_normal_mode = true,
-          -- callback for what to do with the url
-          action_callback = require("gitlinker.actions").open_in_browser,
-          -- print the url after performing the action
-          print_url = false,
-          -- mapping to call url generation
-          mappings = "<leader>gy",
-        },
-      }
+      require("user.gitlinker").config()
     end,
-    requires = "nvim-lua/plenary.nvim",
   },
   {
     "phaazon/hop.nvim",
     event = "BufRead",
     config = function()
-      require("hop").setup()
-      vim.api.nvim_set_keymap("n", "s", ":HopChar2<cr>", { silent = true })
-      vim.api.nvim_set_keymap("n", "S", ":HopWord<cr>", { silent = true })
+      require("user.hop").config()
     end,
   },
   {
@@ -95,17 +75,27 @@ lvim.plugins = {
     "andymass/vim-matchup",
     event = "CursorMoved",
     config = function()
-      vim.g.matchup_matchparen_offscreen = { method = "popup" }
+      require "user.matchup"
     end,
   },
   {
     "nacro90/numb.nvim",
     event = "BufRead",
     config = function()
-      require("numb").setup {
-        show_numbers = true, -- Enable 'number' for the window while peeking
-        show_cursorline = true, -- Enable 'cursorline' for the window while peeking
-      }
+      require("user.numb").config()
+    end,
+  },
+  {
+    "monaqa/dial.nvim",
+    event = "BufRead",
+    config = function()
+      require("user.dial").config()
+    end,
+  },
+  {
+    "norcalli/nvim-colorizer.lua",
+    config = function()
+      require("user.colorizer").config()
     end,
   },
   {
@@ -116,20 +106,6 @@ lvim.plugins = {
     "iamcco/markdown-preview.nvim",
     run = "cd app && npm install",
     ft = "markdown",
-  },
-  {
-    "norcalli/nvim-colorizer.lua",
-    config = function()
-      require("colorizer").setup({ "*" }, {
-        RGB = true, -- #RGB hex codes
-        RRGGBB = true, -- #RRGGBB hex codes
-        RRGGBBAA = true, -- #RRGGBBAA hex codes
-        rgb_fn = true, -- CSS rgb() and rgba() functions
-        hsl_fn = true, -- CSS hsl() and hsla() functions
-        css = true, -- Enable all CSS features: rgb_fn, hsl_fn, names, RGB, RRGGBB
-        css_fn = true, -- Enable all CSS *functions*: rgb_fn, hsl_fn
-      })
-    end,
   },
   {
     "nvim-treesitter/playground",
