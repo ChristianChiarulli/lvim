@@ -70,7 +70,6 @@ lvim.plugins = {
   },
   {
     "kevinhwang91/rnvimr",
-    cmd = "Rnvimr",
     config = function()
       require "user.rnvimr"
     end,
