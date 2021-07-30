@@ -47,6 +47,7 @@ lvim.builtin.which_key.mappings["r"] = {
 -- vim.g.nvim_tree_hijack_netrw = 0
 
 -- Treesitter
+lvim.builtin.treesitter.ensure_installed = "maintained"
 lvim.builtin.treesitter.autotag.enable = true
 lvim.builtin.treesitter.playground.enable = true
 
