@@ -1,5 +1,5 @@
 -- general
-lvim.format_on_save = true
+lvim.format_on_save = false
 lvim.colorscheme = "darkplus"
 
 vim.opt.wrap = false
@@ -54,6 +54,9 @@ lvim.builtin.treesitter.ensure_installed = "maintained"
 lvim.builtin.treesitter.autotag.enable = true
 lvim.builtin.treesitter.playground.enable = true
 
+-- Language Specific
+lvim.lang.json.formatter.exe = "prettier"
+
 -- Additional Plugins
 lvim.plugins = {
   { "lunarvim/colorschemes" },
@@ -103,13 +106,13 @@ lvim.plugins = {
       require "user.lir"
     end,
   },
-  -- {
-  --   "andymass/vim-matchup",
-  --   event = "CursorMoved",
-  --   config = function()
-  --     require "user.matchup"
-  --   end,
-  -- },
+  {
+    "andymass/vim-matchup",
+    event = "CursorMoved",
+    config = function()
+      require "user.matchup"
+    end,
+  },
   {
     "nacro90/numb.nvim",
     event = "BufRead",
