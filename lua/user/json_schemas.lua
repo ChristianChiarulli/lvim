@@ -3,6 +3,11 @@ local M = {}
 M.setup = function()
   local schemas = {
     {
+      description = "Package JSON file",
+      fileMatch = { "package.json" },
+      url = "https://json.schemastore.org/package.json",
+    },
+    {
       description = "TypeScript compiler configuration file",
       fileMatch = { "tsconfig.json", "tsconfig.*.json" },
       url = "http://json.schemastore.org/tsconfig",
