@@ -7,7 +7,7 @@ vim.opt.wrap = false
 -- keymappings
 lvim.leader = "space"
 
-vim.cmd[[
+vim.cmd [[
   nnoremap <esc><esc> <cmd>nohlsearch<cr>
   nnoremap Y y$ 
   vnoremap p "_dP
@@ -53,21 +53,26 @@ lvim.builtin.treesitter.playground.enable = true
 -- Language Specific
 
 --json
-lvim.lang.json.formatter.exe = "prettier"
+lvim.lang.json.formatters = {
+  {
+    exe = "prettier",
+    args = {},
+  },
+}
 
 -- python
 lvim.lang.python.formatters = {
   {
     exe = "black",
-    args = {}
-  }
+    args = {},
+  },
 }
 
 lvim.lang.python.linters = {
   {
     exe = "flake8",
-    args = {}
-  }
+    args = {},
+  },
 }
 
 -- Additional Plugins
