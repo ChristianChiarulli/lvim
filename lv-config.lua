@@ -50,31 +50,6 @@ lvim.builtin.treesitter.ensure_installed = "maintained"
 lvim.builtin.treesitter.autotag.enable = true
 lvim.builtin.treesitter.playground.enable = true
 
--- Language Specific
-
---json
-lvim.lang.json.formatters = {
-  {
-    exe = "prettier",
-    args = {},
-  },
-}
-
--- python
-lvim.lang.python.formatters = {
-  {
-    exe = "black",
-    args = {},
-  },
-}
-
-lvim.lang.python.linters = {
-  {
-    exe = "flake8",
-    args = {},
-  },
-}
-
 -- Additional Plugins
 lvim.plugins = {
   { "lunarvim/colorschemes" },
