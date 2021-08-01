@@ -3,6 +3,7 @@ lvim.format_on_save = false
 lvim.colorscheme = "darkplus"
 lvim.transparent_window = false
 vim.opt.wrap = false
+lvim.debug = false
 
 -- keymappings
 lvim.leader = "space"
@@ -146,6 +147,18 @@ lvim.plugins = {
       require("user.zen").config()
     end,
   },
+  {"karb94/neoscroll.nvim",
+    config = function()
+      require("user.neoscroll").config()
+    end,
+  },
+
+  -- TODO: maybe oneday
+  -- { "gelguy/wilder.nvim",
+  --   config = function ()
+  --     vim.cmd("source $HOME/.config/lvim/lua/user/wilder.vim")
+  --   end
+  -- },
   -- {
   --   "folke/twilight.nvim",
   --   config = function()
