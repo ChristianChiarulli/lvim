@@ -76,7 +76,13 @@ lvim.plugins = {
       require "user.rnvimr"
     end,
   },
-
+  {
+    "lukas-reineke/indent-blankline.nvim",
+    -- event = "BufReadPre",
+    config = function()
+      require("user.blankline")
+    end,
+  },
   {
     "ruifm/gitlinker.nvim",
     event = "BufRead",
