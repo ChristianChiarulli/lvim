@@ -8,17 +8,9 @@ lvim.debug = false
 -- keymappings
 lvim.leader = "space"
 
-vim.cmd [[
-  nnoremap <esc><esc> <cmd>nohlsearch<cr>
-  nnoremap Y y$ 
-  vnoremap p "_dP
-]]
--- " paste on cursor
--- "nnoremap gP i<CR><Esc>PkJxJx
--- "nnoremap gp a<CR><Esc>PkJxJx
--- " delete without yanking
--- "nnoremap <leader>d "_d
--- "vnoremap <leader>d "_d
+lvim.keys.normal_mode["<esc><esc>"] = "<cmd>nohlsearch<cr>"
+lvim.keys.normal_mode["Y"] = "y$"
+lvim.keys.visual_mode["p"] = [["_dP]]
 
 -- LSP
 lvim.lsp.diagnostics.virtual_text = false
