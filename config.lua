@@ -58,6 +58,13 @@ lvim.plugins = {
   --   after = { "nvim-compe", "vim-vsnip" }, -- if a completion plugin is using tabs load it before
   -- },
   {
+    "pwntester/octo.nvim",
+    event = "BufRead",
+    config = function()
+      require("user.octo").config()
+    end,
+  },
+  {
     "ray-x/lsp_signature.nvim",
     event = "InsertEnter",
     config = function()
