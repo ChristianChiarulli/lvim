@@ -20,6 +20,8 @@ require("user.json_schemas").setup()
 -- Builtins
 lvim.builtin.dashboard.active = true
 lvim.builtin.terminal.active = true
+lvim.builtin.dap.active = true
+lvim.builtin.bufferline.active = true
 
 -- Whichkey
 lvim.builtin.which_key.mappings.l.d = { "<cmd>TroubleToggle<cr>", "Diagnostics" }
