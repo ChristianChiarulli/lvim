@@ -51,6 +51,21 @@ lvim.builtin.treesitter.playground.enable = true
 lvim.plugins = {
   { "lunarvim/colorschemes" },
   { "mfussenegger/nvim-jdtls" },
+  -- {
+  --   "abecodes/tabout.nvim",
+  --   config = function()
+  --     require("user.tabout").config()
+  --   end,
+  --   wants = { "nvim-treesitter" }, -- or require if not used so far
+  --   after = { "nvim-compe", "vim-vsnip" }, -- if a completion plugin is using tabs load it before
+  -- },
+  {
+    "pwntester/octo.nvim",
+    event = "BufRead",
+    config = function()
+      require("user.octo").config()
+    end,
+  },
   {
     "ray-x/lsp_signature.nvim",
     event = "InsertEnter",
@@ -74,7 +89,7 @@ lvim.plugins = {
     "lukas-reineke/indent-blankline.nvim",
     -- event = "BufReadPre",
     config = function()
-      require("user.blankline")
+      require "user.blankline"
     end,
   },
   {
@@ -149,7 +164,8 @@ lvim.plugins = {
       require("user.zen").config()
     end,
   },
-  {"karb94/neoscroll.nvim",
+  {
+    "karb94/neoscroll.nvim",
     config = function()
       require("user.neoscroll").config()
     end,
