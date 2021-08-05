@@ -5,6 +5,7 @@ M.config = function()
   if not status_ok then
     return
   end
+  lvim.builtin.which_key.mappings["gy"] = "Link"
   gitlinker.setup {
     opts = {
       callbacks = {
