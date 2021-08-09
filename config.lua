@@ -1,5 +1,5 @@
 -- general
-lvim.format_on_save = false
+lvim.format_on_save = true
 lvim.colorscheme = "darkplus"
 lvim.transparent_window = false
 vim.opt.wrap = false
@@ -169,6 +169,13 @@ lvim.plugins = {
     config = function()
       require("user.neoscroll").config()
     end,
+  },
+  {
+    "vuki656/package-info.nvim",
+    config = function()
+      require "user.package-info"
+    end,
+    ft = "json",
   },
 
   -- TODO: maybe oneday
