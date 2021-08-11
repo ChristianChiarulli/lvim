@@ -186,7 +186,13 @@ lvim.plugins = {
     end,
     ft = "json",
   },
-
+  {
+    "rcarriga/nvim-notify",
+    event = "BufRead",
+    config = function()
+      require("user.notify").config()
+    end,
+  },
   -- TODO: maybe oneday
   -- { "gelguy/wilder.nvim",
   --   config = function ()
@@ -200,6 +206,9 @@ lvim.plugins = {
   --   end,
   --   -- cmd = "ZenMode",
   -- },
+  {
+    "dccsillag/magma-nvim",
+  },
   {
     "simrat39/symbols-outline.nvim",
     cmd = "SymbolsOutline",
