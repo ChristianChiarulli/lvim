@@ -1,6 +1,9 @@
 -- general
-lvim.format_on_save = true
+lvim.format_on_save = false
+-- lvim.colorscheme = "darkplus"
 lvim.colorscheme = "darkplus"
+-- vim.g.tokyonight_style = "night"
+-- change background to #1b1c25
 lvim.transparent_window = false
 vim.opt.wrap = false
 lvim.debug = false
@@ -59,6 +62,7 @@ end
 -- Additional Plugins
 lvim.plugins = {
   { "lunarvim/colorschemes" },
+  { "folke/tokyonight.nvim" },
   { "mfussenegger/nvim-jdtls" },
   -- {
   --   "abecodes/tabout.nvim",
