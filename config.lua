@@ -1,6 +1,6 @@
 -- general
 lvim.format_on_save = true
-lvim.colorscheme = "darkplus"
+lvim.colorscheme = "onedark"
 lvim.transparent_window = false
 vim.opt.wrap = false
 lvim.debug = false
@@ -153,13 +153,13 @@ lvim.plugins = {
       require("user.colorizer").config()
     end,
   },
-  {
-    "nvim-telescope/telescope-project.nvim",
-    event = "BufWinEnter",
-    setup = function()
-      vim.cmd [[packadd telescope.nvim]]
-    end,
-  },
+  -- {
+  --   "nvim-telescope/telescope-project.nvim",
+  --   event = "BufWinEnter",
+  --   setup = function()
+  --     vim.cmd [[packadd telescope.nvim]]
+  --   end,
+  -- },
   {
     "windwp/nvim-spectre",
     event = "BufRead",
