@@ -196,6 +196,13 @@ lvim.plugins = {
       require("user.notify").config()
     end,
   },
+  {
+    "simrat39/symbols-outline.nvim",
+    -- cmd = "SymbolsOutline",
+    config = function()
+      require("user.outline").config()
+    end,
+  },
   -- TODO: maybe oneday
   -- { "gelguy/wilder.nvim",
   --   config = function ()
@@ -211,10 +218,6 @@ lvim.plugins = {
   -- },
   {
     "dccsillag/magma-nvim",
-  },
-  {
-    "simrat39/symbols-outline.nvim",
-    cmd = "SymbolsOutline",
   },
   {
     "metakirby5/codi.vim",
