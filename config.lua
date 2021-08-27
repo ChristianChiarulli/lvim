@@ -1,6 +1,6 @@
 -- general
 lvim.format_on_save = true
-lvim.colorscheme = "onedark"
+lvim.colorscheme = "onedarker"
 lvim.format_on_save = false
 lvim.transparent_window = false
 vim.opt.wrap = false
@@ -60,6 +60,7 @@ end
 -- Additional Plugins
 lvim.plugins = {
   { "lunarvim/colorschemes" },
+  { "lunarvim/onedarker" },
   { "folke/tokyonight.nvim" },
   { "mfussenegger/nvim-jdtls" },
   -- {
