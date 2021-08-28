@@ -6,6 +6,9 @@ lvim.transparent_window = false
 vim.opt.wrap = false
 lvim.debug = false
 
+-- vim.g.loaded_netrw = 1
+-- vim.g.loaded_netrwPlugin = 1
+
 -- keymappings
 lvim.leader = "space"
 
@@ -39,9 +42,6 @@ lvim.builtin.which_key.mappings["r"] = {
 }
 lvim.builtin.which_key.mappings.f = { "<cmd>lua require('lir.float').toggle()<cr>", "Files" }
 
-lvim.builtin.nvimtree.auto_open = 0
--- vim.g.nvim_tree_disable_netrw = 0
--- vim.g.nvim_tree_hijack_netrw = 0
 
 -- Treesitter
 lvim.builtin.treesitter.ensure_installed = "maintained"

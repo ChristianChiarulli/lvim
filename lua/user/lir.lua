@@ -87,7 +87,7 @@ function _G.LirSettings()
   )
 
   -- echo cwd
-  vim.api.nvim_echo({ { vim.fn.expand "%:p", "Normal" } }, false, {})
+  -- vim.api.nvim_echo({ { vim.fn.expand "%:p", "Normal" } }, false, {})
 end
 
 vim.cmd [[augroup lir-settings]]
