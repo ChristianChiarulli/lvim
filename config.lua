@@ -59,8 +59,8 @@ end
 
 -- Additional Plugins
 lvim.plugins = {
-  { "lunarvim/colorschemes" },
-  { "lunarvim/onedarker" },
+  -- { "lunarvim/colorschemes" },
+  -- { "lunarvim/onedarker" },
   { "folke/tokyonight.nvim" },
   { "mfussenegger/nvim-jdtls" },
   -- {
