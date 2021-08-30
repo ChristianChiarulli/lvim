@@ -1,5 +1,4 @@
 -- general
-lvim.format_on_save = true
 lvim.colorscheme = "onedarker"
 lvim.format_on_save = false
 lvim.transparent_window = false
