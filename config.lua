@@ -59,8 +59,7 @@ end
 -- Additional Plugins
 lvim.plugins = {
   -- { "lunarvim/colorschemes" },
-  -- { "lunarvim/onedarker" },
-  { "folke/tokyonight.nvim" },
+  -- { "folke/tokyonight.nvim" },
   { "mfussenegger/nvim-jdtls" },
   -- {
   --   "abecodes/tabout.nvim",
@@ -77,13 +76,13 @@ lvim.plugins = {
       require("user.octo").config()
     end,
   },
-  {
-    "ray-x/lsp_signature.nvim",
-    event = "InsertEnter",
-    config = function()
-      require("user.lsp_signature").config()
-    end,
-  },
+  -- {
+  --   "ray-x/lsp_signature.nvim",
+  --   event = "InsertEnter",
+  --   config = function()
+  --     require("user.lsp_signature").config()
+  --   end,
+  -- },
   {
     "unblevable/quick-scope",
     config = function()
