@@ -41,7 +41,6 @@ lvim.builtin.which_key.mappings["r"] = {
 }
 lvim.builtin.which_key.mappings.f = { "<cmd>lua require('lir.float').toggle()<cr>", "Files" }
 
-
 -- Treesitter
 lvim.builtin.treesitter.ensure_installed = "maintained"
 lvim.builtin.treesitter.autotag.enable = true
@@ -61,6 +60,7 @@ lvim.plugins = {
   -- { "lunarvim/colorschemes" },
   -- { "folke/tokyonight.nvim" },
   { "mfussenegger/nvim-jdtls" },
+  { "TovarishFin/vim-solidity" },
   -- {
   --   "abecodes/tabout.nvim",
   --   config = function()
