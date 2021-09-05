@@ -30,7 +30,7 @@ lvim.builtin.dashboard.active = true
 lvim.builtin.terminal.active = true
 lvim.builtin.dap.active = true
 lvim.builtin.bufferline.active = true
-lvim.builtin.tabnine = { active = false } -- only use for solidity and other langs that I don't have a langserver for
+lvim.builtin.tabnine = { active = true } -- only use for solidity and other langs that I don't have a langserver for
 if lvim.builtin.tabnine.active then
   lvim.builtin.compe.source.tabnine = { kind = " ", priority = 150, max_reslts = 6 }
 end
@@ -69,7 +69,7 @@ lvim.plugins = {
   -- { "lunarvim/colorschemes" },
   -- { "folke/tokyonight.nvim" },
   { "mfussenegger/nvim-jdtls" },
-  { "TovarishFin/vim-solidity" },
+  { "ChristianChiarulli/vim-solidity" },
   {
     "abecodes/tabout.nvim",
     config = function()
