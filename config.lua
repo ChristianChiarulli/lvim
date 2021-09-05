@@ -15,6 +15,11 @@ lvim.keys.normal_mode["<esc><esc>"] = "<cmd>nohlsearch<cr>"
 lvim.keys.normal_mode["Y"] = "y$"
 lvim.keys.visual_mode["p"] = [["_dP]]
 
+-- for finding syntax ids for non TS enabled languages
+vim.cmd [[
+map <F3> :echo "hi<" . synIDattr(synID(line("."),col("."),1),"name") . '> trans<' . synIDattr(synID(line("."),col("."),0),"name") . "> lo<" . synIDattr(synIDtrans(synID(line("."),col("."),1)),"name") . ">" . " FG:" . synIDattr(synIDtrans(synID(line("."),col("."),1)),"fg#")<CR>
+]]
+
 -- LSP
 lvim.lsp.diagnostics.virtual_text = false
 lvim.lsp.override = { "java" }
