@@ -41,6 +41,16 @@ lvim.builtin.which_key.mappings.l.R = { "<cmd>TroubleToggle lsp_references<cr>",
 lvim.builtin.which_key.mappings.l.o = { "<cmd>SymbolsOutline<cr>", "Outline" }
 lvim.builtin.which_key.mappings.T.h = { "<cmd>TSHighlightCapturesUnderCursor<cr>", "Highlight" }
 lvim.builtin.which_key.mappings.T.p = { "<cmd>TSPlaygroundToggle<cr>", "Playground" }
+
+lvim.builtin.which_key.mappings.g["G"] = {
+  name = "Gist",
+  a = { "<cmd>Gist -b -a<cr>", "Create Anon" },
+  d = { "<cmd>Gist -d<cr>", "Delete" },
+  f = { "<cmd>Gist -f<cr>", "Fork" },
+  g = { "<cmd>Gist -b<cr>", "Create" },
+  l = { "<cmd>Gist -l<cr>", "List" },
+  p = { "<cmd>Gist -b -p<cr>", "Create Private" },
+}
 lvim.builtin.which_key.mappings["z"] = { "<cmd>ZenMode<cr>", "Zen" }
 lvim.builtin.which_key.mappings["r"] = {
   name = "Replace",
@@ -126,9 +136,19 @@ lvim.plugins = {
     end,
   },
   {
+    -- Note for this to work you need to create a pat and put it in `~/.gist-vim` as <token XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX>
+    -- You will also need to set github username like:
+    --
+    -- [user]
+    --	 email = chris.machine@pm.me
+    --   name = Christian Chiarulli
+    -- [github]
+    --   user = ChristianChiarulli
     "mattn/vim-gist",
-    event = "BufRead",
     requires = "mattn/webapi-vim",
+    config = function()
+      vim.g.gist_open_browser_after_post = 1
+    end,
   },
   {
     "tamago324/lir.nvim",
