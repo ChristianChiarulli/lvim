@@ -31,10 +31,6 @@ lvim.builtin.dashboard.active = true
 lvim.builtin.terminal.active = true
 lvim.builtin.dap.active = true
 lvim.builtin.bufferline.active = true
--- lvim.builtin.tabnine = { active = true } -- only use for solidity and other langs that I don't have a langserver for
--- if lvim.builtin.tabnine.active then
---   lvim.builtin.compe.source.tabnine = { kind = " ﮧ ", priority = 150, max_reslts = 6 }
--- end
 
 -- Whichkey
 lvim.builtin.which_key.mappings.l.d = { "<cmd>TroubleToggle<cr>", "Diagnostics" }
