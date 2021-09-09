@@ -77,14 +77,14 @@ lvim.plugins = {
   -- { "folke/tokyonight.nvim" },
   { "mfussenegger/nvim-jdtls" },
   { "ChristianChiarulli/vim-solidity" },
-  -- {
-  --   "abecodes/tabout.nvim",
-  --   config = function()
-  --     require("user.tabout").config()
-  --   end,
-  --   wants = { "nvim-treesitter" }, -- or require if not used so far
-  --   after = { "nvim-compe", "vim-vsnip" }, -- if a completion plugin is using tabs load it before
-  -- },
+  {
+    "abecodes/tabout.nvim",
+    config = function()
+      require("user.tabout").config()
+    end,
+    wants = { "nvim-treesitter" }, -- or require if not used so far
+    after = { "nvim-cmp", "LuaSnip" }, -- if a completion plugin is using tabs load it before
+  },
   {
     "pwntester/octo.nvim",
     event = "BufRead",
