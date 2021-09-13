@@ -3,6 +3,8 @@
 -- end
 
 -- find_root looks for parent directories relative to the current buffer containing one of the given arguments.
+
+USER = vim.fn.expand "$USER"
 if vim.fn.has "mac" == 1 then
   WORKSPACE_PATH = "/Users/" .. USER .. "/workspace/"
 elseif vim.fn.has "unix" == 1 then
