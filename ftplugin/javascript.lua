@@ -4,8 +4,8 @@ lvim.lang.javascript.formatters = {
   },
 }
 
-lvim.lang.javascript.linters = {
-  {
-    exe = "eslint_d",
-  },
-}
+-- lvim.lang.javascript.linters = {
+--   {
+--     exe = "eslint_d",
+--   },
+-- }
