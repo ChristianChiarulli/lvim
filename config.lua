@@ -1,5 +1,5 @@
 -- general
-lvim.colorscheme = "onedarker"
+lvim.colorscheme = "darkplus"
 lvim.format_on_save = false
 lvim.transparent_window = false
 vim.opt.wrap = false
@@ -30,7 +30,13 @@ lvim.builtin.dashboard.active = true
 lvim.builtin.terminal.active = true
 lvim.builtin.dap.active = true
 lvim.builtin.bufferline.active = true
+lvim.builtin.cmp.experimental.ghost_text = false
 -- lvim.builtin.cmp.sources = {}
+
+lvim.builtin.fancy_statusline = { active = true } -- enable/disable fancy statusline
+if lvim.builtin.fancy_statusline.active then
+  require("user.lualine").config()
+end
 
 -- Whichkey
 lvim.builtin.which_key.mappings.l.d = { "<cmd>TroubleToggle<cr>", "Diagnostics" }
@@ -64,17 +70,17 @@ lvim.builtin.treesitter.playground.enable = true
 lvim.builtin.treesitter.indent.disable = { "python" }
 
 -- Telescope
-lvim.builtin.telescope.on_config_done = function()
-  local actions = require "telescope.actions"
-  lvim.builtin.telescope.defaults.mappings.i["<C-j>"] = actions.move_selection_next
-  lvim.builtin.telescope.defaults.mappings.i["<C-k>"] = actions.move_selection_previous
-  lvim.builtin.telescope.defaults.mappings.i["<C-n>"] = actions.cycle_history_next
-  lvim.builtin.telescope.defaults.mappings.i["<C-p>"] = actions.cycle_history_prev
-end
+-- lvim.builtin.telescope.on_config_done = function()
+--   local actions = require "telescope.actions"
+--   lvim.builtin.telescope.defaults.mappings.i["<C-j>"] = actions.move_selection_next
+--   lvim.builtin.telescope.defaults.mappings.i["<C-k>"] = actions.move_selection_previous
+--   lvim.builtin.telescope.defaults.mappings.i["<C-n>"] = actions.cycle_history_next
+--   lvim.builtin.telescope.defaults.mappings.i["<C-p>"] = actions.cycle_history_prev
+-- end
 
 -- Additional Plugins
 lvim.plugins = {
-  -- { "lunarvim/colorschemes" },
+  { "lunarvim/colorschemes" },
   -- { "folke/tokyonight.nvim" },
   { "mfussenegger/nvim-jdtls" },
   { "ChristianChiarulli/vim-solidity" },
@@ -214,13 +220,13 @@ lvim.plugins = {
   --   end,
   --   ft = "json",
   -- },
-  {
-    "rcarriga/nvim-notify",
-    event = "BufRead",
-    config = function()
-      require("user.notify").config()
-    end,
-  },
+  -- {
+  --   "rcarriga/nvim-notify",
+  --   event = "BufRead",
+  --   config = function()
+  --     require("user.notify").config()
+  --   end,
+  -- },
   {
     "simrat39/symbols-outline.nvim",
     -- cmd = "SymbolsOutline",
