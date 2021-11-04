@@ -197,6 +197,9 @@ M.config = function()
     hide_in_width = function()
       return vim.fn.winwidth(0) > 80
     end,
+    hide_in_width_lsp = function()
+      return vim.fn.winwidth(0) > 60
+    end,
     hide_small = function()
       return vim.fn.winwidth(0) > 150
     end,
@@ -251,7 +254,7 @@ M.config = function()
             -- return mode()
           end,
           color = "LualineModeInactive",
-          padding = { left = 1, right = 0 },
+          padding = { left = 0, right = 0 },
           -- left_padding = 1,
         },
         {
@@ -516,7 +519,7 @@ M.config = function()
     end,
     icon = " ",
     color = { fg = colors.fg },
-    cond = conditions.hide_in_width,
+    cond = conditions.hide_in_width_lsp,
   }
 
   ins_right {
