@@ -14,6 +14,8 @@ lvim.leader = "space"
 lvim.keys.normal_mode["<esc><esc>"] = "<cmd>nohlsearch<cr>"
 -- lvim.keys.normal_mode["Y"] = "y$"
 lvim.keys.visual_mode["p"] = [["_dP]]
+lvim.keys.normal_mode["Q"] = "<cmd>BufferClose!<CR>"
+lvim.keys.normal_mode["X"] = "<cmd>BufferClose!<CR>"
 
 -- for finding syntax ids for non TS enabled languages
 vim.cmd [[
@@ -69,14 +71,17 @@ lvim.builtin.treesitter.autotag.enable = true
 lvim.builtin.treesitter.playground.enable = true
 lvim.builtin.treesitter.indent.disable = { "python" }
 
+-- local actions = require "telescope.actions"
+-- lvim.builtin.telescope.defaults.mappings.i["<C-j>"] = actions.move_selection_next
+
 -- Telescope
--- lvim.builtin.telescope.on_config_done = function()
---   local actions = require "telescope.actions"
---   lvim.builtin.telescope.defaults.mappings.i["<C-j>"] = actions.move_selection_next
---   lvim.builtin.telescope.defaults.mappings.i["<C-k>"] = actions.move_selection_previous
---   lvim.builtin.telescope.defaults.mappings.i["<C-n>"] = actions.cycle_history_next
---   lvim.builtin.telescope.defaults.mappings.i["<C-p>"] = actions.cycle_history_prev
--- end
+lvim.builtin.telescope.on_config_done = function()
+  local actions = require "telescope.actions"
+  lvim.builtin.telescope.defaults.mappings.i["<C-j>"] = actions.move_selection_next
+  lvim.builtin.telescope.defaults.mappings.i["<C-k>"] = actions.move_selection_previous
+  lvim.builtin.telescope.defaults.mappings.i["<C-n>"] = actions.cycle_history_next
+  lvim.builtin.telescope.defaults.mappings.i["<C-p>"] = actions.cycle_history_prev
+end
 
 -- Additional Plugins
 lvim.plugins = {
