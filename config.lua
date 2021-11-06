@@ -153,6 +153,7 @@ lvim.plugins = {
     --   name = Christian Chiarulli
     -- [github]
     --   user = ChristianChiarulli
+    --	 email = chris.machine@pm.me
     "mattn/vim-gist",
     requires = "mattn/webapi-vim",
     config = function()
