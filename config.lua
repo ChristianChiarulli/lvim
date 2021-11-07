@@ -70,6 +70,7 @@ lvim.builtin.treesitter.ensure_installed = "maintained"
 lvim.builtin.treesitter.autotag.enable = true
 lvim.builtin.treesitter.playground.enable = true
 lvim.builtin.treesitter.indent.disable = { "python" }
+-- lvim.builtin.lualine.options.theme = ""
 
 -- local actions = require "telescope.actions"
 -- lvim.builtin.telescope.defaults.mappings.i["<C-j>"] = actions.move_selection_next
