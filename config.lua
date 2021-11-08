@@ -24,7 +24,7 @@ map <F3> :echo "hi<" . synIDattr(synID(line("."),col("."),1),"name") . '> trans<
 
 -- LSP
 lvim.lsp.diagnostics.virtual_text = false
-lvim.lsp.override = { "java" }
+-- lvim.lsp.override = { "java" }
 -- require("user.json_schemas").setup()
 
 -- Builtins
@@ -70,6 +70,7 @@ lvim.builtin.treesitter.ensure_installed = "maintained"
 lvim.builtin.treesitter.autotag.enable = true
 lvim.builtin.treesitter.playground.enable = true
 lvim.builtin.treesitter.indent.disable = { "python" }
+lvim.builtin.treesitter.rainbow.enable = true
 -- lvim.builtin.lualine.options.theme = ""
 
 -- local actions = require "telescope.actions"
@@ -98,6 +99,7 @@ lvim.plugins = {
   --   wants = { "nvim-treesitter" }, -- or require if not used so far
   --   after = { "nvim-cmp", "LuaSnip" }, -- if a completion plugin is using tabs load it before
   -- },
+  { "p00f/nvim-ts-rainbow"},
   {
     "pwntester/octo.nvim",
     event = "BufRead",
