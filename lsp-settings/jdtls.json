@@ -1,3 +1,5 @@
 {
-  "java.format.enabled": true
+  "java.format.enabled": true,
+  "java.referencesCodeLens.enabled": true,
+  "java.eclipse.downloadSources": false
 }

@@ -225,7 +225,7 @@ lvim.plugins = {
   --   config = function()
   --     require "user.package-info"
   --   end,
-  --   ft = "json",
+  --   -- ft = "json",
   -- },
   -- {
   --   "rcarriga/nvim-notify",
@@ -242,11 +242,14 @@ lvim.plugins = {
     end,
   },
   -- TODO: maybe oneday
-  -- { "gelguy/wilder.nvim",
-  --   config = function ()
-  --     vim.cmd("source $HOME/.config/lvim/lua/user/wilder.vim")
-  --   end
-  -- },
+--   { "gelguy/wilder.nvim",
+--     config = function ()
+--       -- vim.cmd("source $HOME/.config/lvim/lua/user/wilder.vim")
+--       vim.cmd([[
+--         call wilder#setup({'modes': [':', '/', '?']})
+--       ]])
+--     end
+--   },
   -- {
   --   "folke/twilight.nvim",
   --   config = function()
@@ -270,13 +273,6 @@ lvim.plugins = {
     run = "./install.sh",
     requires = "hrsh7th/nvim-cmp",
   },
-  -- {
-  --   "tzachar/compe-tabnine",
-  --   run = "./install.sh",
-  --   requires = "hrsh7th/nvim-compe",
-  --   event = "InsertEnter",
-  --   disable = not lvim.builtin.tabnine.active,
-  -- },
   {
     "dccsillag/magma-nvim",
   },

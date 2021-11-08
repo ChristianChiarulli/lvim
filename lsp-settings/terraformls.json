@@ -1,0 +1,5 @@
+{
+  "terraform-ls.experimentalFeatures": {
+    "validateOnSave": true
+  }
+}
