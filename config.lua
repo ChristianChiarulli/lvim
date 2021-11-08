@@ -71,6 +71,23 @@ lvim.builtin.treesitter.autotag.enable = true
 lvim.builtin.treesitter.playground.enable = true
 lvim.builtin.treesitter.indent.disable = { "python" }
 lvim.builtin.treesitter.rainbow.enable = true
+lvim.builtin.treesitter.rainbow.extended_mode = true
+-- lvim.builtin.treesitter.rainbow.colors = {
+  -- "#cc241d",
+  -- "#98971a",
+  -- "#b16286",
+  -- "#d65d0e",
+  -- "#458588",
+  -- "#689d6a",
+  -- "#d79921",
+  -- "#bf616a",
+  -- "#a3be8c",
+  -- "#b48ead",
+  -- "#d08770",
+  -- "#ebcb8b",
+  -- "#689d6a",
+  -- "#d79921",
+-- }
 -- lvim.builtin.lualine.options.theme = ""
 
 -- local actions = require "telescope.actions"
@@ -99,7 +116,7 @@ lvim.plugins = {
   --   wants = { "nvim-treesitter" }, -- or require if not used so far
   --   after = { "nvim-cmp", "LuaSnip" }, -- if a completion plugin is using tabs load it before
   -- },
-  { "p00f/nvim-ts-rainbow"},
+  { "p00f/nvim-ts-rainbow" },
   {
     "pwntester/octo.nvim",
     event = "BufRead",
@@ -244,14 +261,14 @@ lvim.plugins = {
     end,
   },
   -- TODO: maybe oneday
---   { "gelguy/wilder.nvim",
---     config = function ()
---       -- vim.cmd("source $HOME/.config/lvim/lua/user/wilder.vim")
---       vim.cmd([[
---         call wilder#setup({'modes': [':', '/', '?']})
---       ]])
---     end
---   },
+  --   { "gelguy/wilder.nvim",
+  --     config = function ()
+  --       -- vim.cmd("source $HOME/.config/lvim/lua/user/wilder.vim")
+  --       vim.cmd([[
+  --         call wilder#setup({'modes': [':', '/', '?']})
+  --       ]])
+  --     end
+  --   },
   -- {
   --   "folke/twilight.nvim",
   --   config = function()
