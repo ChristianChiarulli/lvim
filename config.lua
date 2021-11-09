@@ -71,22 +71,22 @@ lvim.builtin.treesitter.autotag.enable = true
 lvim.builtin.treesitter.playground.enable = true
 lvim.builtin.treesitter.indent.disable = { "python" }
 lvim.builtin.treesitter.rainbow.enable = true
-lvim.builtin.treesitter.rainbow.extended_mode = true
+lvim.builtin.treesitter.rainbow.extended_mode = false
 -- lvim.builtin.treesitter.rainbow.colors = {
-  -- "#cc241d",
-  -- "#98971a",
-  -- "#b16286",
-  -- "#d65d0e",
-  -- "#458588",
-  -- "#689d6a",
-  -- "#d79921",
-  -- "#bf616a",
-  -- "#a3be8c",
-  -- "#b48ead",
-  -- "#d08770",
-  -- "#ebcb8b",
-  -- "#689d6a",
-  -- "#d79921",
+-- "#cc241d",
+-- "#98971a",
+-- "#b16286",
+-- "#d65d0e",
+-- "#458588",
+-- "#689d6a",
+-- "#d79921",
+-- "#bf616a",
+-- "#a3be8c",
+-- "#b48ead",
+-- "#d08770",
+-- "#ebcb8b",
+-- "#689d6a",
+-- "#d79921",
 -- }
 -- lvim.builtin.lualine.options.theme = ""
 
@@ -318,7 +318,10 @@ lvim.plugins = {
   },
   {
     "windwp/nvim-ts-autotag",
-    event = "InsertEnter",
+    config = function()
+      require("user.autotag").config()
+    end,
+    -- event = "InsertEnter",
   },
   {
     "sindrets/diffview.nvim",
