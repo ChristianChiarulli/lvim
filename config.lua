@@ -11,20 +11,9 @@ lvim.debug = false
 -- keymappings
 lvim.leader = "space"
 
-lvim.keys = {
-  normal_mode = {
-    -- ["<A-j"] = false,
-    ["<esc><esc>"] = "<cmd>nohlsearch<cr>",
-    ["Q"] = "<cmd>BufferClose!<CR>",
-  },
-  visual_mode = {
-      ["p"] = [["_dP]],
-  }
-}
-
--- lvim.keys.normal_mode["<esc><esc>"] = "<cmd>nohlsearch<cr>"
--- lvim.keys.visual_mode["p"] = [["_dP]]
--- lvim.keys.normal_mode["Q"] = "<cmd>BufferClose!<CR>"
+lvim.keys.normal_mode["<esc><esc>"] = "<cmd>nohlsearch<cr>"
+lvim.keys.visual_mode["p"] = [["_dP]]
+lvim.keys.normal_mode["Q"] = "<cmd>BufferClose!<CR>"
 
 -- lvim.keys.normal_mode["Y"] = "y$"
 -- lvim.keys.normal_mode["X"] = "<cmd>BufferClose!<CR>"
