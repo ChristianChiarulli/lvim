@@ -83,7 +83,7 @@ lvim.builtin.treesitter.rainbow = {
     -- "Salmon",
     -- "LawnGreen",
   },
-  disable = {"javascriptreact", "typescriptreact", "tsx", "jsx", "html"}
+  -- disable = {"javascriptreact", "typescriptreact", "tsx", "jsx", "html"}
 
 }
 
@@ -146,7 +146,7 @@ lvim.plugins = {
   --   wants = { "nvim-treesitter" }, -- or require if not used so far
   --   after = { "nvim-cmp", "LuaSnip" }, -- if a completion plugin is using tabs load it before
   -- },
-  { "p00f/nvim-ts-rainbow" },
+  { "ChristianChiarulli/nvim-ts-rainbow" },
   { "nvim-treesitter/nvim-treesitter-textobjects" },
   {
     "pwntester/octo.nvim",
@@ -155,13 +155,13 @@ lvim.plugins = {
       require("user.octo").config()
     end,
   },
-  -- {
-  --   "ray-x/lsp_signature.nvim",
-  --   event = "InsertEnter",
-  --   config = function()
-  --     require("user.lsp_signature").config()
-  --   end,
-  -- },
+  {
+    "ray-x/lsp_signature.nvim",
+    event = "InsertEnter",
+    config = function()
+      require("user.lsp_signature").config()
+    end,
+  },
   {
     "unblevable/quick-scope",
     config = function()
