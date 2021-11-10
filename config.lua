@@ -11,10 +11,20 @@ lvim.debug = false
 -- keymappings
 lvim.leader = "space"
 
-lvim.keys.normal_mode["<esc><esc>"] = "<cmd>nohlsearch<cr>"
+lvim.keys = {
+  normal_mode = {
+    -- ["<A-j"] = false,
+    ["<esc><esc>"] = "<cmd>nohlsearch<cr>",
+    ["p"] = [["_dP]],
+    ["Q"] = "<cmd>BufferClose!<CR>",
+  },
+}
+
+-- lvim.keys.normal_mode["<esc><esc>"] = "<cmd>nohlsearch<cr>"
+-- lvim.keys.visual_mode["p"] = [["_dP]]
+-- lvim.keys.normal_mode["Q"] = "<cmd>BufferClose!<CR>"
+
 -- lvim.keys.normal_mode["Y"] = "y$"
-lvim.keys.visual_mode["p"] = [["_dP]]
-lvim.keys.normal_mode["Q"] = "<cmd>BufferClose!<CR>"
 -- lvim.keys.normal_mode["X"] = "<cmd>BufferClose!<CR>"
 
 -- for finding syntax ids for non TS enabled languages
@@ -69,8 +79,7 @@ lvim.builtin.which_key.mappings["r"] = {
 }
 -- lvim.builtin.which_key.mappings.f = { "<cmd>lua require('lir.float').toggle()<cr>", "Files" }
 lvim.builtin.which_key.mappings["P"] = { "<cmd>Telescope projects<cr>", "Projects" }
-lvim.builtin.which_key.mappings["R"] = { "<cmd>lua require(\"renamer\").rename()<cr>", "Projects" }
-
+lvim.builtin.which_key.mappings["R"] = { '<cmd>lua require("renamer").rename()<cr>', "Projects" }
 
 -- Treesitter
 lvim.builtin.treesitter.ensure_installed = "maintained"
