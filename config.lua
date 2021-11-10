@@ -15,9 +15,11 @@ lvim.keys = {
   normal_mode = {
     -- ["<A-j"] = false,
     ["<esc><esc>"] = "<cmd>nohlsearch<cr>",
-    ["p"] = [["_dP]],
     ["Q"] = "<cmd>BufferClose!<CR>",
   },
+  visual_mode = {
+      ["p"] = [["_dP]],
+  }
 }
 
 -- lvim.keys.normal_mode["<esc><esc>"] = "<cmd>nohlsearch<cr>"
@@ -83,7 +85,11 @@ lvim.builtin.which_key.mappings["R"] = { '<cmd>lua require("renamer").rename()<c
 
 -- Treesitter
 lvim.builtin.treesitter.ensure_installed = "maintained"
-lvim.builtin.treesitter.autotag.enable = true
+lvim.builtin.treesitter.autotag = {
+  enable = true,
+  disable = {"xml"}
+}
+
 lvim.builtin.treesitter.playground.enable = true
 lvim.builtin.treesitter.indent.disable = { "python" }
 lvim.builtin.treesitter.rainbow = {
