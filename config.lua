@@ -69,6 +69,8 @@ lvim.builtin.which_key.mappings["r"] = {
 }
 -- lvim.builtin.which_key.mappings.f = { "<cmd>lua require('lir.float').toggle()<cr>", "Files" }
 lvim.builtin.which_key.mappings["P"] = { "<cmd>Telescope projects<cr>", "Projects" }
+lvim.builtin.which_key.mappings["R"] = { "<cmd>lua require(\"renamer\").rename()<cr>", "Projects" }
+
 
 -- Treesitter
 lvim.builtin.treesitter.ensure_installed = "maintained"
@@ -155,6 +157,13 @@ lvim.plugins = {
     config = function()
       require("user.octo").config()
     end,
+  },
+  {
+    "filipdutescu/renamer.nvim",
+    config = function()
+      require("user.renamer").config()
+    end,
+    branch = "master",
   },
   {
     "ray-x/lsp_signature.nvim",
