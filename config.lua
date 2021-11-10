@@ -14,13 +14,13 @@ lvim.leader = "space"
 lvim.keys.normal_mode["<esc><esc>"] = "<cmd>nohlsearch<cr>"
 lvim.keys.visual_mode["p"] = [["_dP]]
 lvim.keys.normal_mode["Q"] = "<cmd>BufferClose!<CR>"
-
--- lvim.keys.normal_mode["Y"] = "y$"
--- lvim.keys.normal_mode["X"] = "<cmd>BufferClose!<CR>"
+lvim.keys.normal_mode["<F1>"] = "<nop>"
+lvim.keys.normal_mode["<F1>"] = "<cmd>Telescope commands<CR>"
+lvim.keys.normal_mode["<F12>"] = "<cmd>lua vim.lsp.buf.definition()<CR>"
 
 -- for finding syntax ids for non TS enabled languages
 vim.cmd [[
-map <F12> :echo "hi<" . synIDattr(synID(line("."),col("."),1),"name") . '> trans<' . synIDattr(synID(line("."),col("."),0),"name") . "> lo<" . synIDattr(synIDtrans(synID(line("."),col("."),1)),"name") . ">" . " FG:" . synIDattr(synIDtrans(synID(line("."),col("."),1)),"fg#")<CR>
+map <F6> :echo "hi<" . synIDattr(synID(line("."),col("."),1),"name") . '> trans<' . synIDattr(synID(line("."),col("."),0),"name") . "> lo<" . synIDattr(synIDtrans(synID(line("."),col("."),1)),"name") . ">" . " FG:" . synIDattr(synIDtrans(synID(line("."),col("."),1)),"fg#")<CR>
 ]]
 
 -- LSP
