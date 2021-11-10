@@ -85,8 +85,7 @@ lvim.builtin.treesitter.rainbow = {
     -- "Salmon",
     -- "LawnGreen",
   },
-  -- disable = {"javascriptreact", "typescriptreact", "tsx", "jsx", "html"}
-
+  disable = { "html" },
 }
 
 lvim.builtin.treesitter.textobjects = {
