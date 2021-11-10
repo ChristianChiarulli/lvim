@@ -213,12 +213,12 @@ lvim.plugins = {
       vim.g.gist_open_browser_after_post = 1
     end,
   },
-  {
-    "tamago324/lir.nvim",
-    config = function()
-      require "user.lir"
-    end,
-  },
+  -- {
+  --   "tamago324/lir.nvim",
+  --   config = function()
+  --     require "user.lir"
+  --   end,
+  -- },
   {
     "andymass/vim-matchup",
     event = "CursorMoved",
