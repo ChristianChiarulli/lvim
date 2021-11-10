@@ -15,7 +15,7 @@ lvim.keys.normal_mode["<esc><esc>"] = "<cmd>nohlsearch<cr>"
 -- lvim.keys.normal_mode["Y"] = "y$"
 lvim.keys.visual_mode["p"] = [["_dP]]
 lvim.keys.normal_mode["Q"] = "<cmd>BufferClose!<CR>"
-lvim.keys.normal_mode["X"] = "<cmd>BufferClose!<CR>"
+-- lvim.keys.normal_mode["X"] = "<cmd>BufferClose!<CR>"
 
 -- for finding syntax ids for non TS enabled languages
 vim.cmd [[
