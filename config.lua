@@ -49,6 +49,7 @@ lvim.builtin.which_key.mappings.l.R = { "<cmd>TroubleToggle lsp_references<cr>",
 lvim.builtin.which_key.mappings.l.o = { "<cmd>SymbolsOutline<cr>", "Outline" }
 lvim.builtin.which_key.mappings.T.h = { "<cmd>TSHighlightCapturesUnderCursor<cr>", "Highlight" }
 lvim.builtin.which_key.mappings.T.p = { "<cmd>TSPlaygroundToggle<cr>", "Playground" }
+lvim.builtin.which_key.mappings.s.l = { "<cmd>Telescope resume<cr>", "Last Search" }
 
 lvim.builtin.which_key.mappings.g["G"] = {
   name = "Gist",
@@ -67,6 +68,7 @@ lvim.builtin.which_key.mappings["r"] = {
   f = { "<cmd>lua require('spectre').open_file_search()<cr>", "Replace Buffer" },
 }
 -- lvim.builtin.which_key.mappings.f = { "<cmd>lua require('lir.float').toggle()<cr>", "Files" }
+lvim.builtin.which_key.mappings["P"] = { "<cmd>Telescope projects<cr>", "Projects" }
 
 -- Treesitter
 lvim.builtin.treesitter.ensure_installed = "maintained"
