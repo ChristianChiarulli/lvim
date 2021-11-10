@@ -33,7 +33,10 @@ lvim.builtin.terminal.active = true
 lvim.builtin.dap.active = true
 lvim.builtin.bufferline.active = true
 lvim.builtin.cmp.experimental.ghost_text = false
+lvim.builtin.project.patterns = {".git"}
+lvim.builtin.project.detection_methods = {"pattern"}
 -- lvim.builtin.cmp.sources = {}
+-- lvim.builtin.project.active = false
 
 lvim.builtin.fancy_statusline = { active = true } -- enable/disable fancy statusline
 if lvim.builtin.fancy_statusline.active then
