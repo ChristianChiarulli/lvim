@@ -254,13 +254,6 @@ lvim.plugins = {
       require("user.colorizer").config()
     end,
   },
-  -- {
-  --   "nvim-telescope/telescope-project.nvim",
-  --   event = "BufWinEnter",
-  --   setup = function()
-  --     vim.cmd [[packadd telescope.nvim]]
-  --   end,
-  -- },
   {
     "windwp/nvim-spectre",
     event = "BufRead",
