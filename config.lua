@@ -83,18 +83,8 @@ lvim.builtin.treesitter.rainbow = {
     -- "Salmon",
     -- "LawnGreen",
   },
-  -- -- Enable only for lisp like languages
   disable = {"javascriptreact", "typescriptreact", "tsx", "jsx", "html"}
 
-  --   vim.tbl_filter(function(p)
-  --   local disable = true
-  --   for _, lang in pairs(enabled_list) do
-  --     if p == lang then
-  --       disable = false
-  --     end
-  --   end
-  --   return disable
-  -- end, parsers.available_parsers()),
 }
 
 lvim.builtin.treesitter.textobjects = {
