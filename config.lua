@@ -33,8 +33,8 @@ lvim.builtin.terminal.active = true
 lvim.builtin.dap.active = true
 lvim.builtin.bufferline.active = true
 lvim.builtin.cmp.experimental.ghost_text = false
-lvim.builtin.project.patterns = {".git"}
-lvim.builtin.project.detection_methods = {"pattern"}
+lvim.builtin.project.patterns = { ".git" }
+lvim.builtin.project.detection_methods = { "pattern" }
 -- lvim.builtin.cmp.sources = {}
 -- lvim.builtin.project.active = false
 
@@ -73,16 +73,39 @@ lvim.builtin.treesitter.ensure_installed = "maintained"
 lvim.builtin.treesitter.autotag.enable = true
 lvim.builtin.treesitter.playground.enable = true
 lvim.builtin.treesitter.indent.disable = { "python" }
-lvim.builtin.treesitter.rainbow.enable = true
+lvim.builtin.treesitter.rainbow = {
+  enable = true,
+  colors = {
+    "Gold",
+    "Orchid",
+    "DodgerBlue",
+    -- "Cornsilk",
+    -- "Salmon",
+    -- "LawnGreen",
+  },
+  -- -- Enable only for lisp like languages
+  disable = {"javascriptreact", "typescriptreact", "tsx", "jsx", "html"}
+
+  --   vim.tbl_filter(function(p)
+  --   local disable = true
+  --   for _, lang in pairs(enabled_list) do
+  --     if p == lang then
+  --       disable = false
+  --     end
+  --   end
+  --   return disable
+  -- end, parsers.available_parsers()),
+}
+
 lvim.builtin.treesitter.textobjects = {
- -- lsp_interop = {
- --      enable = true,
- --      border = 'single',
- --      peek_definition_code = {
- --        ["<leader>df"] = "@function.outer",
- --        ["<leader>dF"] = "@class.outer",
- --      },
- --    },
+  -- lsp_interop = {
+  --      enable = true,
+  --      border = 'single',
+  --      peek_definition_code = {
+  --        ["<leader>df"] = "@function.outer",
+  --        ["<leader>dF"] = "@class.outer",
+  --      },
+  --    },
   move = {
     enable = true,
     set_jumps = true, -- whether to set jumps in the jumplist
@@ -105,14 +128,6 @@ lvim.builtin.treesitter.textobjects = {
   },
 }
 
-lvim.builtin.treesitter.rainbow.colors = {
-  "Gold",
-  "DodgerBlue",
-  "Orchid",
-  -- "Cornsilk",
-  -- "Salmon",
-  -- "LawnGreen",
-}
 -- lvim.builtin.lualine.options.theme = ""
 
 -- local actions = require "telescope.actions"
