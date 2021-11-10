@@ -71,23 +71,45 @@ lvim.builtin.treesitter.autotag.enable = true
 lvim.builtin.treesitter.playground.enable = true
 lvim.builtin.treesitter.indent.disable = { "python" }
 lvim.builtin.treesitter.rainbow.enable = true
-lvim.builtin.treesitter.rainbow.extended_mode = false
--- lvim.builtin.treesitter.rainbow.colors = {
--- "#cc241d",
--- "#98971a",
--- "#b16286",
--- "#d65d0e",
--- "#458588",
--- "#689d6a",
--- "#d79921",
--- "#bf616a",
--- "#a3be8c",
--- "#b48ead",
--- "#d08770",
--- "#ebcb8b",
--- "#689d6a",
--- "#d79921",
--- }
+lvim.builtin.treesitter.textobjects = {
+ -- lsp_interop = {
+ --      enable = true,
+ --      border = 'single',
+ --      peek_definition_code = {
+ --        ["<leader>df"] = "@function.outer",
+ --        ["<leader>dF"] = "@class.outer",
+ --      },
+ --    },
+  move = {
+    enable = true,
+    set_jumps = true, -- whether to set jumps in the jumplist
+    goto_next_start = {
+      ["]m"] = "@function.outer",
+      ["]]"] = "@class.outer",
+    },
+    goto_next_end = {
+      ["]M"] = "@function.outer",
+      ["]["] = "@class.outer",
+    },
+    goto_previous_start = {
+      ["[m"] = "@function.outer",
+      ["[["] = "@class.outer",
+    },
+    goto_previous_end = {
+      ["[M"] = "@function.outer",
+      ["[]"] = "@class.outer",
+    },
+  },
+}
+
+lvim.builtin.treesitter.rainbow.colors = {
+  "Gold",
+  "DodgerBlue",
+  "Orchid",
+  -- "Cornsilk",
+  -- "Salmon",
+  -- "LawnGreen",
+}
 -- lvim.builtin.lualine.options.theme = ""
 
 -- local actions = require "telescope.actions"
@@ -117,6 +139,7 @@ lvim.plugins = {
   --   after = { "nvim-cmp", "LuaSnip" }, -- if a completion plugin is using tabs load it before
   -- },
   { "p00f/nvim-ts-rainbow" },
+  { "nvim-treesitter/nvim-treesitter-textobjects" },
   {
     "pwntester/octo.nvim",
     event = "BufRead",
@@ -147,7 +170,7 @@ lvim.plugins = {
     "lukas-reineke/indent-blankline.nvim",
     -- event = "BufReadPre",
     config = function()
-      require "user.blankline"
+      require("user.blankline").config()
     end,
   },
   {
@@ -258,6 +281,13 @@ lvim.plugins = {
     -- cmd = "SymbolsOutline",
     config = function()
       require("user.outline").config()
+    end,
+  },
+
+  {
+    "folke/todo-comments.nvim",
+    config = function()
+      require("user.todo_comments").config()
     end,
   },
   -- TODO: maybe oneday
