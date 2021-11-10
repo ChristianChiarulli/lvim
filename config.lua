@@ -287,13 +287,6 @@ lvim.plugins = {
   --   end,
   --   -- ft = "json",
   -- },
-  -- {
-  --   "rcarriga/nvim-notify",
-  --   event = "BufRead",
-  --   config = function()
-  --     require("user.notify").config()
-  --   end,
-  -- },
   {
     "simrat39/symbols-outline.nvim",
     -- cmd = "SymbolsOutline",
