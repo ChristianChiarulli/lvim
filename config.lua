@@ -16,12 +16,16 @@ lvim.keys.visual_mode["p"] = [["_dP]]
 lvim.keys.normal_mode["Q"] = "<cmd>BufferClose!<CR>"
 lvim.keys.normal_mode["<F1>"] = "<nop>"
 lvim.keys.normal_mode["<F1>"] = "<cmd>Telescope commands<CR>"
+lvim.keys.normal_mode["<F11>"] = "<cmd>lua vim.lsp.buf.references()<CR>"
 lvim.keys.normal_mode["<F12>"] = "<cmd>lua vim.lsp.buf.definition()<CR>"
+lvim.keys.normal_mode["<F4>"] = "<cmd>Telescope resume<cr>"
 
 -- for finding syntax ids for non TS enabled languages
 vim.cmd [[
 map <F6> :echo "hi<" . synIDattr(synID(line("."),col("."),1),"name") . '> trans<' . synIDattr(synID(line("."),col("."),0),"name") . "> lo<" . synIDattr(synIDtrans(synID(line("."),col("."),1)),"name") . ">" . " FG:" . synIDattr(synIDtrans(synID(line("."),col("."),1)),"fg#")<CR>
 ]]
+lvim.keys.normal_mode["<F7>"] = "<cmd>TSHighlightCapturesUnderCursor<cr>"
+lvim.keys.normal_mode["<F8>"] = "<cmd>TSPlaygroundToggle<cr>"
 
 -- LSP
 lvim.lsp.diagnostics.virtual_text = false
