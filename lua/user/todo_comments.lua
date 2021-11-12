@@ -37,7 +37,7 @@ M.config = function()
     -- * keyword: highlights of the keyword
     -- * after: highlights after the keyword (todo text)
     highlight = {
-      before = "", -- "fg" or "bg" or empty
+      before = "fg", -- "fg" or "bg" or empty
       -- keyword = "wide", -- "fg", "bg", "wide" or empty. (wide is the same as bg, but will also highlight surrounding characters)
       keyword = "fg", -- "fg", "bg", "wide" or empty. (wide is the same as bg, but will also highlight surrounding characters)
       after = "fg", -- "fg" or "bg" or empty
