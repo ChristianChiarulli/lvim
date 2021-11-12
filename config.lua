@@ -75,6 +75,12 @@ lvim.builtin.which_key.mappings["r"] = {
   w = { "<cmd>lua require('spectre').open_visual({select_word=true})<cr>", "Replace Word" },
   f = { "<cmd>lua require('spectre').open_file_search()<cr>", "Replace Buffer" },
 }
+-- lvim.builtin.which_key.mappings["m"] = {
+--   name = "Replace",
+--   t = { "<cmd>BookmarkToggle<cr>", "Toggle" },
+--   n = { "<cmd>BookmarkNext<cr>", "Next" },
+--   p = { "<cmd>BookmarkPrev<cr>", "Prev" },
+-- }
 -- lvim.builtin.which_key.mappings.f = { "<cmd>lua require('lir.float').toggle()<cr>", "Files" }
 lvim.builtin.which_key.mappings["P"] = { "<cmd>Telescope projects<cr>", "Projects" }
 lvim.builtin.which_key.mappings["R"] = { '<cmd>lua require("renamer").rename()<cr>', "Projects" }
@@ -382,6 +388,18 @@ lvim.plugins = {
     "sindrets/diffview.nvim",
     event = "BufRead",
   },
+  -- NOTE: Whichkey breaks this unfortunately
+  -- {
+  --   "MattesGroeger/vim-bookmarks",
+  --   config = function()
+  --     -- highlight BookmarkSign ctermbg=NONE ctermfg=160
+  --     -- highlight BookmarkLine ctermbg=194 ctermfg=NONE
+  --     vim.g.bookmark_sign = "♥"
+  --     vim.g.bookmark_no_default_key_mappings = 1
+  --     vim.g.bookmark_auto_save = 1
+  --     -- vim.g.bookmark_highlight_lines = 1
+  --   end,
+  -- },
   -- {
   --   "kristijanhusak/orgmode.nvim",
   --   config = function()
