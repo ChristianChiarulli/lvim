@@ -5,8 +5,8 @@ lvim.transparent_window = false
 vim.opt.wrap = false
 lvim.debug = false
 
--- vim.g.loaded_netrw = 1
--- vim.g.loaded_netrwPlugin = 1
+vim.g.loaded_netrw = 1
+vim.g.loaded_netrwPlugin = 1
 
 -- keymappings
 lvim.leader = "space"
@@ -19,6 +19,7 @@ lvim.keys.normal_mode["<F1>"] = "<cmd>Telescope commands<CR>"
 lvim.keys.normal_mode["<F11>"] = "<cmd>lua vim.lsp.buf.references()<CR>"
 lvim.keys.normal_mode["<F12>"] = "<cmd>lua vim.lsp.buf.definition()<CR>"
 lvim.keys.normal_mode["<F4>"] = "<cmd>Telescope resume<cr>"
+lvim.keys.normal_mode["<F5>"] = ":e ~/Notes/<cr>"
 
 -- for finding syntax ids for non TS enabled languages
 vim.cmd [[
@@ -55,6 +56,7 @@ lvim.builtin.which_key.mappings.l.o = { "<cmd>SymbolsOutline<cr>", "Outline" }
 lvim.builtin.which_key.mappings.T.h = { "<cmd>TSHighlightCapturesUnderCursor<cr>", "Highlight" }
 lvim.builtin.which_key.mappings.T.p = { "<cmd>TSPlaygroundToggle<cr>", "Playground" }
 lvim.builtin.which_key.mappings.s.l = { "<cmd>Telescope resume<cr>", "Last Search" }
+lvim.builtin.which_key.mappings.g.l = { "<cmd>GitBlameToggle<cr>", "Blame" }
 
 lvim.builtin.which_key.mappings.g["G"] = {
   name = "Gist",
@@ -80,7 +82,7 @@ lvim.builtin.which_key.mappings["R"] = { '<cmd>lua require("renamer").rename()<c
 lvim.builtin.treesitter.ensure_installed = "maintained"
 lvim.builtin.treesitter.autotag = {
   enable = true,
-  disable = {"xml"}
+  disable = { "xml" },
 }
 
 lvim.builtin.treesitter.playground.enable = true
@@ -199,6 +201,16 @@ lvim.plugins = {
       require("user.blankline").config()
     end,
   },
+
+  {
+    "f-person/git-blame.nvim",
+    config = function()
+      vim.g.gitblame_enabled = 0
+      vim.g.gitblame_message_template = "<summary> • <date> • <author>"
+      vim.g.gitblame_highlight_group = "LineNr"
+    end,
+  },
+
   {
     "ruifm/gitlinker.nvim",
     event = "BufRead",
@@ -369,6 +381,12 @@ lvim.plugins = {
     "sindrets/diffview.nvim",
     event = "BufRead",
   },
+  -- {
+  --   "kristijanhusak/orgmode.nvim",
+  --   config = function()
+  --     require("user.orgmode").config()
+  --   end,
+  -- },
 }
 
 vim.cmd [[ au CmdWinEnter * quit ]]
