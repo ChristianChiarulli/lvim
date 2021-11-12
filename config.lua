@@ -182,13 +182,13 @@ lvim.plugins = {
     end,
     branch = "master",
   },
-  {
-    "ray-x/lsp_signature.nvim",
-    event = "InsertEnter",
-    config = function()
-      require("user.lsp_signature").config()
-    end,
-  },
+  -- {
+  --   "ray-x/lsp_signature.nvim",
+  --   event = "InsertEnter",
+  --   config = function()
+  --     require("user.lsp_signature").config()
+  --   end,
+  -- },
   {
     "unblevable/quick-scope",
     config = function()
