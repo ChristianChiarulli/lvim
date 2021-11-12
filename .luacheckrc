@@ -1,30 +1,35 @@
 -- vim: ft=lua tw=80
 
 stds.nvim = {
-	globals = {
-		"O",
-		vim = { fields = { "g" } },
-		"CONFIG_PATH",
-		"CACHE_PATH",
-		"DATA_PATH",
-		"TERMINAL",
-		"USER",
+  globals = {
+    "lvim",
+    vim = { fields = { "g" } },
+    "TERMINAL",
+    "USER",
     "C",
     "Config",
     "WORKSPACE_PATH",
     "JAVA_LS_EXECUTABLE",
     "MUtils",
-    os = {fields = {"capture"}}
-	},
-	read_globals = {
-		"jit",
-		"os",
-		"vim",
-		-- vim = { fields = { "cmd", "api", "fn", "o" } },
-	},
+    "USER_CONFIG_PATH",
+    os = { fields = { "capture" } },
+  },
+  read_globals = {
+    "jit",
+    "os",
+    "vim",
+    "join_paths",
+    "get_runtime_dir",
+    "get_config_dir",
+    "get_cache_dir",
+    "get_lvim_base_dir",
+    "get_version",
+    -- vim = { fields = { "cmd", "api", "fn", "o" } },
+  },
 }
 std = "lua51+nvim"
 
+files["tests/*_spec.lua"].std = "lua51+nvim+busted"
 
 -- Don't report unused self arguments of methods.
 self = false
@@ -33,6 +38,6 @@ self = false
 cache = true
 
 ignore = {
-	"631", -- max_line_length
-	"212/_.*", -- unused argument, for vars with "_" prefix
+  "631", -- max_line_length
+  "212/_.*", -- unused argument, for vars with "_" prefix
 }

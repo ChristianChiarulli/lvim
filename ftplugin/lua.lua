@@ -4,7 +4,7 @@
 --   },
 -- }
 local formatters = require "lvim.lsp.null-ls.formatters"
-formatters.setup({{exe = "stylua", filetypes = {"lua"} }})
+formatters.setup { { exe = "stylua", filetypes = { "lua" } } }
 
--- local linters = require "lvim.lsp.null-ls.linters"
--- linters.setup({{exe = "luacheck", filetypes = {"lua"} }})
+local linters = require "lvim.lsp.null-ls.linters"
+linters.setup { { exe = "luacheck", filetypes = { "lua" } } }
