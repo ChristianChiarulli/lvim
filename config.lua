@@ -39,6 +39,7 @@ lvim.builtin.terminal.active = true
 lvim.builtin.dap.active = true
 lvim.builtin.bufferline.active = true
 lvim.builtin.cmp.experimental.ghost_text = false
+lvim.builtin.telescope.defaults.path_display = { "smart" }
 lvim.builtin.project.patterns = { ".git" }
 lvim.builtin.project.detection_methods = { "pattern" }
 -- lvim.builtin.cmp.sources = {}
