@@ -7,6 +7,8 @@ lvim.debug = false
 
 vim.g.loaded_netrw = 1
 vim.g.loaded_netrwPlugin = 1
+vim.cmd [[set iskeyword+=-]]
+vim.cmd [[set formatoptions-=cro]] -- TODO: this doesn't seem to work
 
 -- keymappings
 lvim.leader = "space"
@@ -411,7 +413,7 @@ lvim.plugins = {
 vim.cmd [[ au CmdWinEnter * quit ]]
 -- TODO: q quits in spectr_panel ft
 -- Autocommands (https://neovim.io/doc/user/autocmd.html)
--- O.user_autocommands = {{ "BufWinEnter", "*", "echo \"hi again\""}}
+-- lvim.autocommands.custom_groups = {{ "BufRead", "*", "set formatoptions-=cro"}}
 
 -- way to get os name
 -- print(vim.loop.os_uname().sysname)
