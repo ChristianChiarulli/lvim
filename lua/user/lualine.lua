@@ -538,7 +538,7 @@ M.config = function()
       end
       vim.list_extend(buf_client_names, supported_linters)
 
-      return table.concat(buf_client_names, ", ")
+      return "[" .. table.concat(buf_client_names, ", ") .. "]"
     end,
     icon = " ",
     color = { fg = colors.fg },
