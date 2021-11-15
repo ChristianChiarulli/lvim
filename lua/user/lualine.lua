@@ -548,6 +548,14 @@ M.config = function()
   }
 
   ins_right {
+    function()
+      return "Spaces: " .. vim.api.nvim_buf_get_option(0, "shiftwidth") .. " "
+    end,
+    cond = conditions.hide_in_width,
+    color = { fg = colors.fg, bg = colors.bg },
+  }
+
+  ins_right {
     "location",
     padding = 0,
     -- left_padding = 0,
