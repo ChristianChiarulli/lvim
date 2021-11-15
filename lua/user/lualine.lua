@@ -359,6 +359,7 @@ M.config = function()
       -- cond = conditions.hide_in_width,
       colored = false,
       always_visible = true,
+      padding = { left = 2, right = 2 },
     }
   else
     ins_left {
@@ -370,6 +371,7 @@ M.config = function()
       -- cond = conditions.hide_in_width,
       colored = false,
       always_visible = true,
+      padding = { left = 2, right = 2 },
     }
   end
   ins_left {
