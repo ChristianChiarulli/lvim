@@ -22,6 +22,7 @@ lvim.keys.normal_mode["<F11>"] = "<cmd>lua vim.lsp.buf.references()<CR>"
 lvim.keys.normal_mode["<F12>"] = "<cmd>lua vim.lsp.buf.definition()<CR>"
 lvim.keys.normal_mode["<F4>"] = "<cmd>Telescope resume<cr>"
 lvim.keys.normal_mode["<F5>"] = ":e ~/Notes/<cr>"
+lvim.keys.normal_mode["<TAB>"] = "<cmd>lua vim.lsp.buf.signature_help()<CR>"
 
 -- for finding syntax ids for non TS enabled languages
 vim.cmd [[
@@ -186,7 +187,6 @@ lvim.plugins = {
   },
   -- {
   --   "ray-x/lsp_signature.nvim",
-  --   event = "InsertEnter",
   --   config = function()
   --     require("user.lsp_signature").config()
   --   end,
