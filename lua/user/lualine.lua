@@ -70,7 +70,7 @@ local mode = function()
     return "▊ "
   end
   -- return "  "
-    return "▊ "
+  return "▊ "
 end
 local file_icons = {
   Brown = { "" },
@@ -148,9 +148,13 @@ local function get_file_icon_color()
 end
 
 local default_colors = {
-  bg = "#252525",
-  bg_alt = "#252525",
-  fg = "#b4b4b4",
+  -- bg = "#252525",
+  -- bg_alt = "#252525",
+  -- bg = "#68217a",
+  -- bg_alt = "#68217a",
+  bg = "#327ac6",
+  bg_alt = "#327ac6",
+  fg = "#fafafa",
   yellow = "#dcdcaa",
   yellow_orange = "#d7ba7d",
   cyan = "#4ec9b0",
@@ -166,7 +170,7 @@ local default_colors = {
 
 M.config = function()
   local colors
-    colors = default_colors
+  colors = default_colors
   -- Color table for highlights
   local mode_color = {
     n = colors.blue,
@@ -213,7 +217,7 @@ M.config = function()
   -- Config
   local config = {
     options = {
-      icons_enabled = true,
+      icons_enabled = false,
       -- Disable sections and component separators
       component_separators = { left = "", right = "" },
       section_separators = { left = "", right = "" },
@@ -260,7 +264,7 @@ M.config = function()
         {
           "filename",
           cond = conditions.buffer_not_empty,
-          color = { fg = colors.blue, gui = "bold" },
+          color = { fg = colors.fg, gui = "bold" },
         },
       },
       lualine_x = {},
@@ -292,11 +296,11 @@ M.config = function()
     -- left_padding = 1,
   }
   ins_left {
-    function ()
+    function()
       return "  "
     end,
     cond = conditions.check_git_workspace,
-    color = { fg = colors.orange }, -- Sets highlighting of component
+    color = { fg = colors.fg }, -- Sets highlighting of component
     padding = 0,
   }
   ins_left {
@@ -327,7 +331,7 @@ M.config = function()
   --   cond = conditions.hide_in_width,
   -- }
   ins_left {
-    function ()
+    function()
       return ""
     end,
     padding = 0,
@@ -353,9 +357,9 @@ M.config = function()
     source = diff_source,
     symbols = { added = "  ", modified = "柳", removed = " " },
     diff_color = {
-      added = { fg = colors.git.add },
-      modified = { fg = colors.git.change },
-      removed = { fg = colors.git.delete },
+      added = { fg = colors.fg },
+      modified = { fg = colors.fg },
+      removed = { fg = colors.fg },
     },
     color = {},
     cond = nil,
@@ -376,7 +380,7 @@ M.config = function()
       end
       return ""
     end,
-    color = { fg = colors.green },
+    color = { fg = colors.fg },
     cond = conditions.hide_in_width,
   }
   ins_left {
@@ -431,7 +435,7 @@ M.config = function()
       end
       return "" -- """
     end,
-    color = { fg = colors.red },
+    color = { fg = colors.fg },
   }
 
   local ok, _ = pcall(require, "vim.diagnostic")
@@ -441,6 +445,7 @@ M.config = function()
       sources = { "nvim" },
       symbols = { error = " ", warn = " ", info = " ", hint = " " },
       cond = conditions.hide_in_width,
+      colored = false,
     }
   else
     ins_right {
@@ -448,21 +453,22 @@ M.config = function()
       sources = { "nvim_lsp" },
       symbols = { error = " ", warn = " ", info = " ", hint = " " },
       cond = conditions.hide_in_width,
+      colored = false,
     }
   end
-  ins_right {
-    function()
-      if next(vim.treesitter.highlighter.active) then
-        return "  "
-      end
-      return ""
-    end,
-    padding = 0,
-    -- left_padding = 0,
-    -- right_padding = 0,
-    color = { fg = colors.green },
-    cond = conditions.hide_in_width,
-  }
+  -- ins_right {
+  --   function()
+  --     if next(vim.treesitter.highlighter.active) then
+  --       return "  "
+  --     end
+  --     return ""
+  --   end,
+  --   padding = 0,
+  --   -- left_padding = 0,
+  --   -- right_padding = 0,
+  --   color = { fg = colors.green },
+  --   cond = conditions.hide_in_width,
+  -- }
   ins_right {
     function(msg)
       msg = msg or "LS Inactive"
@@ -563,10 +569,17 @@ M.config = function()
   --   cond = conditions.hide_in_width,
   -- }
 
+  -- ins_right {
+  --   clock,
+  --   cond = conditions.hide_in_width,
+  --   color = { fg = colors.blue, bg = colors.bg },
+  -- }
+
   ins_right {
-    clock,
+    "filetype",
     cond = conditions.hide_in_width,
-    color = { fg = colors.blue, bg = colors.bg },
+    color = { fg = colors.fg, bg = colors.bg },
+    icon = "",
   }
 
   ins_right {
@@ -581,7 +594,7 @@ M.config = function()
     padding = 1,
     -- left_padding = 0,
     -- right_padding = 0,
-    color = { fg = colors.yellow_orange, bg = colors.bg },
+    color = { fg = colors.fg, bg = colors.bg },
     cond = nil,
   }
 
