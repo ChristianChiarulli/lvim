@@ -5,6 +5,7 @@ lvim.transparent_window = false
 vim.opt.wrap = false
 lvim.debug = false
 
+-- vim.g.bufferline = { no_name_title = "Empty" }
 vim.g.loaded_netrw = 1
 vim.g.loaded_netrwPlugin = 1
 vim.cmd [[set iskeyword+=-]]
@@ -20,6 +21,8 @@ lvim.keys.normal_mode["<F1>"] = "<nop>"
 lvim.keys.normal_mode["<F1>"] = "<cmd>Telescope commands<CR>"
 lvim.keys.normal_mode["<F11>"] = "<cmd>lua vim.lsp.buf.references()<CR>"
 lvim.keys.normal_mode["<F12>"] = "<cmd>lua vim.lsp.buf.definition()<CR>"
+lvim.keys.normal_mode["<F3>"] = "<cmd>lua require(\"user.bookmark\").toggle_bookmark()<CR>"
+lvim.keys.normal_mode["<F4>"] = "<cmd>lua require(\"user.bookmark\").remove_bookmark()<CR>"
 lvim.keys.normal_mode["<F4>"] = "<cmd>Telescope resume<cr>"
 lvim.keys.normal_mode["<F5>"] = ":e ~/Notes/<cr>"
 lvim.keys.normal_mode["<TAB>"] = "<cmd>lua vim.lsp.buf.signature_help()<CR>"
@@ -78,12 +81,20 @@ lvim.builtin.which_key.mappings["r"] = {
   w = { "<cmd>lua require('spectre').open_visual({select_word=true})<cr>", "Replace Word" },
   f = { "<cmd>lua require('spectre').open_file_search()<cr>", "Replace Buffer" },
 }
--- lvim.builtin.which_key.mappings["m"] = {
---   name = "Replace",
---   t = { "<cmd>BookmarkToggle<cr>", "Toggle" },
---   n = { "<cmd>BookmarkNext<cr>", "Next" },
---   p = { "<cmd>BookmarkPrev<cr>", "Prev" },
--- }
+lvim.builtin.which_key.mappings["m"] = {
+  name = "Replace",
+  a = { "<cmd>BookmarkAnnotate<cr>", "Annotate" },
+  c = { "<cmd>BookmarkClear<cr>", "Clear" },
+  m = { "<cmd>lua require(\"harpoon.mark\").add_file()<cr>", "Harpoon Mark" },
+  u = { "<cmd>lua require(\"harpoon.ui\").toggle_quick_menu()<cr>", "Harpoon Menu" },
+  t = { "<cmd>BookmarkToggle<cr>", "Toggle" },
+  k = { "<cmd>BookmarkNext<cr>", "Next" },
+  j = { "<cmd>BookmarkPrev<cr>", "Prev" },
+  q = { "<cmd>BookmarkShowAll<cr>", "Show QF" },
+  s = { "<cmd>Telescope vim_bookmarks current_file<cr>", "Show Buffer" },
+  S = { "<cmd>:Telescope vim_bookmarks all<cr>", "Show All" },
+  x = { "<cmd>BookmarkClearAll<cr>", "Clear All" },
+}
 -- lvim.builtin.which_key.mappings.f = { "<cmd>lua require('lir.float').toggle()<cr>", "Files" }
 lvim.builtin.which_key.mappings["P"] = { "<cmd>Telescope projects<cr>", "Projects" }
 lvim.builtin.which_key.mappings["R"] = { '<cmd>lua require("renamer").rename()<cr>', "Projects" }
@@ -390,18 +401,35 @@ lvim.plugins = {
     "sindrets/diffview.nvim",
     event = "BufRead",
   },
+  {
+    "ThePrimeagen/harpoon",
+  },
   -- NOTE: Whichkey breaks this unfortunately
-  -- {
-  --   "MattesGroeger/vim-bookmarks",
-  --   config = function()
-  --     -- highlight BookmarkSign ctermbg=NONE ctermfg=160
-  --     -- highlight BookmarkLine ctermbg=194 ctermfg=NONE
-  --     vim.g.bookmark_sign = "♥"
-  --     vim.g.bookmark_no_default_key_mappings = 1
-  --     vim.g.bookmark_auto_save = 1
-  --     -- vim.g.bookmark_highlight_lines = 1
-  --   end,
-  -- },
+  {
+    "MattesGroeger/vim-bookmarks",
+    config = function()
+      -- highlight BookmarkSign ctermbg=NONE ctermfg=160
+      -- highlight BookmarkLine ctermbg=194 ctermfg=NONE
+      vim.g.bookmark_sign = ""
+      vim.g.bookmark_annotation_sign = '☰'
+      vim.g.bookmark_no_default_key_mappings = 1
+      vim.g.bookmark_auto_save = 1
+      vim.g.bookmark_auto_close = 0
+      vim.g.bookmark_manage_per_buffer = 0
+      vim.g.bookmark_save_per_working_dir = 0
+      -- vim.g.bookmark_highlight_lines = 1
+      vim.g.bookmark_show_warning = 0
+      vim.g.bookmark_center = 1
+      vim.g.bookmark_location_list = 0
+      vim.g.bookmark_disable_ctrlp = 1
+      vim.g.bookmark_display_annotation = 0
+      -- vim.g.bookmark_auto_save_file = '~/.config/lvim/bookmarks'
+    end,
+    commit = "a86f6387a5dabf0102b4cab433b414a29456f792"
+  },
+  {
+    'tom-anders/telescope-vim-bookmarks.nvim'
+  }
   -- {
   --   "kristijanhusak/orgmode.nvim",
   --   config = function()
