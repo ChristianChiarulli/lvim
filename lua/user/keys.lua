@@ -1,4 +1,3 @@
-
 -- keymappings
 lvim.leader = "space"
 
@@ -9,11 +8,17 @@ lvim.keys.normal_mode["<F1>"] = "<nop>"
 lvim.keys.normal_mode["<F1>"] = "<cmd>Telescope commands<CR>"
 lvim.keys.normal_mode["<F11>"] = "<cmd>lua vim.lsp.buf.references()<CR>"
 lvim.keys.normal_mode["<F12>"] = "<cmd>lua vim.lsp.buf.definition()<CR>"
-lvim.keys.normal_mode["<F3>"] = "<cmd>lua require(\"user.bookmark\").toggle_bookmark()<CR>"
-lvim.keys.normal_mode["<F4>"] = "<cmd>lua require(\"user.bookmark\").remove_bookmark()<CR>"
+lvim.keys.normal_mode["<F3>"] = '<cmd>lua require("user.bookmark").toggle_bookmark()<CR>'
+lvim.keys.normal_mode["<F4>"] = '<cmd>lua require("user.bookmark").remove_bookmark()<CR>'
 lvim.keys.normal_mode["<F4>"] = "<cmd>Telescope resume<cr>"
 lvim.keys.normal_mode["<F5>"] = ":e ~/Notes/<cr>"
 lvim.keys.normal_mode["<TAB>"] = "<cmd>lua vim.lsp.buf.signature_help()<CR>"
+lvim.keys.normal_mode["mm"] = "<cmd>BookmarkToggle<cr>"
+lvim.keys.normal_mode["mj"] = "<cmd>BookmarkNext<cr>"
+lvim.keys.normal_mode["mk"] = "<cmd>BookmarkPrev<cr>"
+lvim.keys.normal_mode["ms"] = "<cmd>Telescope vim_bookmarks all<cr>"
+lvim.keys.normal_mode["mc"] = "<cmd>BookmarkClear<cr>"
+lvim.keys.normal_mode["mx"] = "<cmd>BookmarkClearAll<cr>"
 
 -- for finding syntax ids for non TS enabled languages
 vim.cmd [[
@@ -52,8 +57,8 @@ lvim.builtin.which_key.mappings["m"] = {
   a = { "<cmd>BookmarkAnnotate<cr>", "Annotate" },
   b = { "<cmd>Telescope vim_bookmarks current_file<cr>", "Show Buffer" },
   c = { "<cmd>BookmarkClear<cr>", "Clear" },
-  h = { "<cmd>lua require(\"harpoon.mark\").add_file()<cr>", "Harpoon Mark" },
-  u = { "<cmd>lua require(\"harpoon.ui\").toggle_quick_menu()<cr>", "Harpoon Menu" },
+  h = { '<cmd>lua require("harpoon.mark").add_file()<cr>', "Harpoon Mark" },
+  u = { '<cmd>lua require("harpoon.ui").toggle_quick_menu()<cr>', "Harpoon Menu" },
   m = { "<cmd>BookmarkToggle<cr>", "Toggle" },
   j = { "<cmd>BookmarkNext<cr>", "Next" },
   k = { "<cmd>BookmarkPrev<cr>", "Prev" },
