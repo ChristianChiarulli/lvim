@@ -3,6 +3,7 @@ require('user.keys')
 require('user.bufferline')
 require('user.plugins')
 require('user.settings')
+require('user.treesitter')
 
 -- LSP
 lvim.lsp.diagnostics.virtual_text = false
@@ -18,10 +19,10 @@ lvim.builtin.telescope.defaults.path_display = { "smart" }
 lvim.builtin.project.patterns = { ".git" }
 lvim.builtin.project.detection_methods = { "pattern" }
 lvim.builtin.fancy_statusline = { active = true } -- enable/disable fancy statusline
+-- lvim.builtin.lualine.options.theme = ""
 if lvim.builtin.fancy_statusline.active then
   require("user.lualine").config()
 end
--- require('user.treesitter')
 
 -- Treesitter
 lvim.builtin.treesitter.ensure_installed = "maintained"
@@ -45,38 +46,6 @@ lvim.builtin.treesitter.rainbow = {
   disable = { "html" },
 }
 
-lvim.builtin.treesitter.textobjects = {
-  -- lsp_interop = {
-  --      enable = true,
-  --      border = 'single',
-  --      peek_definition_code = {
-  --        ["<leader>df"] = "@function.outer",
-  --        ["<leader>dF"] = "@class.outer",
-  --      },
-  --    },
-  move = {
-    enable = true,
-    set_jumps = true, -- whether to set jumps in the jumplist
-    goto_next_start = {
-      ["]m"] = "@function.outer",
-      ["]]"] = "@class.outer",
-    },
-    goto_next_end = {
-      ["]M"] = "@function.outer",
-      ["]["] = "@class.outer",
-    },
-    goto_previous_start = {
-      ["[m"] = "@function.outer",
-      ["[["] = "@class.outer",
-    },
-    goto_previous_end = {
-      ["[M"] = "@function.outer",
-      ["[]"] = "@class.outer",
-    },
-  },
-}
-
--- lvim.builtin.lualine.options.theme = ""
 
 -- local actions = require "telescope.actions"
 -- lvim.builtin.telescope.defaults.mappings.i["<C-j>"] = actions.move_selection_next
