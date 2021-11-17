@@ -15,12 +15,27 @@ lvim.keys.normal_mode["<F8>"] = "<cmd>TSPlaygroundToggle<cr>"
 lvim.keys.normal_mode["<F11>"] = "<cmd>lua vim.lsp.buf.references()<CR>"
 lvim.keys.normal_mode["<F12>"] = "<cmd>lua vim.lsp.buf.definition()<CR>"
 lvim.keys.normal_mode["ma"] = "<cmd>BookmarkAnnotate<cr>"
+lvim.keys.normal_mode["mc"] = "<cmd>BookmarkClear<cr>"
 lvim.keys.normal_mode["mm"] = "<cmd>BookmarkToggle<cr>"
+lvim.keys.normal_mode["mh"] = "<cmd>lua require(\"harpoon.mark\").add_file()<cr>"
 lvim.keys.normal_mode["mj"] = "<cmd>BookmarkNext<cr>"
 lvim.keys.normal_mode["mk"] = "<cmd>BookmarkPrev<cr>"
-lvim.keys.normal_mode["ms"] = "<cmd>Telescope vim_bookmarks all<cr>"
-lvim.keys.normal_mode["mc"] = "<cmd>BookmarkClear<cr>"
+lvim.keys.normal_mode["ms"] = "<cmd>lua require('telescope').extensions.vim_bookmarks.all({ hide_filename=false, prompt_title=\"bookmarks\", shorten_path=false })<cr>"
 lvim.keys.normal_mode["mx"] = "<cmd>BookmarkClearAll<cr>"
+lvim.keys.normal_mode["mu"] = "<cmd>lua require(\"harpoon.ui\").toggle_quick_menu()<cr>"
+
+-- local wk = require("which-key")
+-- wk.register({
+--   m = {
+--     name = "Bookmark",
+--     -- m = { "<cmd>BookmarkToggle<cr>", "Find File" }, -- create a binding with label
+--     -- r = { "<cmd>Telescope oldfiles<cr>", "Open Recent File", noremap=false, buffer = 123 }, -- additional options for creating the keymap
+--     -- n = { "New File" }, -- just a label. don't create any mapping
+--     -- e = "Edit File", -- same as above
+--     -- ["1"] = "which_key_ignore",  -- special label to hide it in the popup
+--     -- b = { function() print("bar") end, "Foobar" } -- you can also pass functions!
+--   },
+-- }, { prefix = "m" })
 
 -- Whichkey
 lvim.builtin.which_key.mappings.l.d = { "<cmd>TroubleToggle<cr>", "Diagnostics" }
@@ -50,7 +65,7 @@ lvim.builtin.which_key.mappings["r"] = {
 lvim.builtin.which_key.mappings["m"] = {
   name = "Replace",
   a = { "<cmd>BookmarkAnnotate<cr>", "Annotate" },
-  b = { "<cmd>Telescope vim_bookmarks current_file<cr>", "Show Buffer" },
+  -- b = { "<cmd>lua require('telescope').extensions.vim_bookmarks.current_file({ hide_filename=false, prompt_title=\"bookmarks\", shorten_path=false })<cr>", "Show Buffer" },
   c = { "<cmd>BookmarkClear<cr>", "Clear" },
   h = { '<cmd>lua require("harpoon.mark").add_file()<cr>', "Harpoon Mark" },
   u = { '<cmd>lua require("harpoon.ui").toggle_quick_menu()<cr>', "Harpoon Menu" },
@@ -58,7 +73,7 @@ lvim.builtin.which_key.mappings["m"] = {
   j = { "<cmd>BookmarkNext<cr>", "Next" },
   k = { "<cmd>BookmarkPrev<cr>", "Prev" },
   -- q = { "<cmd>BookmarkShowAll<cr>", "Show QF" },
-  s = { "<cmd>Telescope vim_bookmarks all<cr>", "Show All" },
+  s = { "<cmd>lua require('telescope').extensions.vim_bookmarks.all({ hide_filename=false, prompt_title=\"bookmarks\", shorten_path=false })<cr>", "Show All" },
   x = { "<cmd>BookmarkClearAll<cr>", "Clear All" },
 }
 -- lvim.builtin.which_key.mappings.f = { "<cmd>lua require('lir.float').toggle()<cr>", "Files" }
