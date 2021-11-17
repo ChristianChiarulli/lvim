@@ -97,7 +97,7 @@ lvim.plugins = {
   -- {
   --   "tamago324/lir.nvim",
   --   config = function()
-  --     require "user.lir"
+  --     require ("user.lir").config()
   --   end,
   -- },
   {
