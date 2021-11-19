@@ -1,4 +1,6 @@
 -- general
+lvim.colorscheme = "darkplus"
+lvim.format_on_save = false
 require('user.keys')
 require('user.bufferline')
 require('user.plugins')
@@ -10,6 +12,7 @@ lvim.lsp.diagnostics.virtual_text = false
 -- vim.g.nvim_tree_indent_markers = 1 --"0 by default, this option shows indent markers when folders are open
 vim.list_extend(lvim.lsp.override, { "java", "jdtls" })
 
+-- vim.cmd [[autocmd CursorHoldI * silent! lua vim.lsp.buf.signature_help()]]
 -- Builtins
 lvim.builtin.dashboard.active = true
 lvim.builtin.terminal.active = true

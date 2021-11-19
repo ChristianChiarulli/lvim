@@ -1,5 +1,3 @@
-lvim.colorscheme = "darkplus"
-lvim.format_on_save = false
 lvim.transparent_window = false
 vim.opt.wrap = false
 lvim.debug = false
