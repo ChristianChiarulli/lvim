@@ -21,45 +21,25 @@ local extendedClientCapabilities = jdtls.extendedClientCapabilities
 extendedClientCapabilities.resolveAdditionalTextEditsSupport = true
 JAVA_LS_EXECUTABLE = home .. "/.local/share/lunarvim/lvim/utils/bin/jdtls"
 
-local jar_patterns = {
-  home .. "/.config/lvim/java/java-debug/com.microsoft.java.debug.plugin/target/com.microsoft.java.debug.plugin-*.jar",
-  home .. "/.config/lvim/java/vscode-java-decompiler/server/*.jar",
-  home  .. "/.config/lvim/java/vscode-java-test/server/*.jar",
-}
 local bundles = {
     vim.fn.glob(home .. "/.config/lvim/java/java-debug/com.microsoft.java.debug.plugin/target/com.microsoft.java.debug.plugin-*.jar")
 };
 
 -- This is the new part
 vim.list_extend(bundles, vim.split(vim.fn.glob(home .. "/.config/lvim/java/vscode-java-test/server/*.jar"), "\n"))
--- config['init_options'] = {
---   bundles = bundles;
--- }
 
--- print(vim.inspect(jar_patterns))
--- local bundles = {}
--- for _, jar_pattern in ipairs(jar_patterns) do
---   for _, bundle in ipairs(vim.split(vim.fn.glob(home .. jar_pattern), "\n")) do
---     if not vim.endswith(bundle, "com.microsoft.java.test.runner.jar") then
---       table.insert(bundles, bundle)
---     end
---   end
--- end
 lvim.lsp.code_lens_refresh = false
 jdtls.start_or_attach {
-  -- on_attach = require("lvim.lsp").common_on_attach,
-  on_attach = function(client, bufnr)
-    -- With `hotcodereplace = 'auto' the debug adapter will try to apply code changes
-    -- you make during a debug session immediately.
-    -- Remove the option if you do not want that.
-    require("jdtls").setup_dap { hotcodereplace = "auto" }
-  end,
-  init_options = {
-    bundles = bundles,
- -- bundles = {
- --    vim.fn.glob(home .. "/.config/lvim/java/java-debug/com.microsoft.java.debug.plugin/target/com.microsoft.java.debug.plugin-*.jar")
- --  };
-  },
+  on_attach = require("lvim.lsp").common_on_attach,
+  -- on_attach = function(client, bufnr)
+  --   -- With `hotcodereplace = 'auto' the debug adapter will try to apply code changes
+  --   -- you make during a debug session immediately.
+  --   -- Remove the option if you do not want that.
+  --   require("jdtls").setup_dap { hotcodereplace = "auto" }
+  -- end,
+  -- init_options = {
+  --   bundles = bundles,
+  -- },
   flags = {
     allow_incremental_sync = true,
   },
