@@ -8,7 +8,7 @@ require('user.treesitter')
 -- LSP
 lvim.lsp.diagnostics.virtual_text = false
 -- vim.g.nvim_tree_indent_markers = 1 --"0 by default, this option shows indent markers when folders are open
--- lvim.lsp.override = { "java" }
+vim.list_extend(lvim.lsp.override, { "java", "jdtls" })
 
 -- Builtins
 lvim.builtin.dashboard.active = true
