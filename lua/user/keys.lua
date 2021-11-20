@@ -24,18 +24,12 @@ lvim.keys.normal_mode["ms"] = "<cmd>lua require('telescope').extensions.vim_book
 lvim.keys.normal_mode["mx"] = "<cmd>BookmarkClearAll<cr>"
 lvim.keys.normal_mode["mu"] = "<cmd>lua require(\"harpoon.ui\").toggle_quick_menu()<cr>"
 
--- local wk = require("which-key")
--- wk.register({
---   m = {
---     name = "Bookmark",
---     -- m = { "<cmd>BookmarkToggle<cr>", "Find File" }, -- create a binding with label
---     -- r = { "<cmd>Telescope oldfiles<cr>", "Open Recent File", noremap=false, buffer = 123 }, -- additional options for creating the keymap
---     -- n = { "New File" }, -- just a label. don't create any mapping
---     -- e = "Edit File", -- same as above
---     -- ["1"] = "which_key_ignore",  -- special label to hide it in the popup
---     -- b = { function() print("bar") end, "Foobar" } -- you can also pass functions!
---   },
--- }, { prefix = "m" })
+lvim.keys.normal_mode["<C-N>"] = "<cmd>lua print(\"hi\")<CR>"
+vim.cmd[[nnoremap c* /\<<C-R>=expand('<cword>')<CR>\>\C<CR>``cgn]]
+vim.cmd[[nnoremap c# ?\<<C-R>=expand('<cword>')<CR>\>\C<CR>``cgN]]
+vim.cmd [[vnoremap // y/\V<C-R>=escape(@",'/\')<CR><CR>]]
+local wk = require("which-key")
+wk.register({["c*"] = "Cut forward", ["c?"] = "Cut backward"})
 
 -- Whichkey
 lvim.builtin.which_key.mappings.l.d = { "<cmd>TroubleToggle<cr>", "Diagnostics" }

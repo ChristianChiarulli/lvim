@@ -1,11 +1,11 @@
 -- general
 lvim.colorscheme = "darkplus"
 lvim.format_on_save = false
-require('user.keys')
-require('user.bufferline')
-require('user.plugins')
-require('user.settings')
-require('user.treesitter')
+require "user.keys"
+require "user.bufferline"
+require "user.plugins"
+require "user.settings"
+require "user.treesitter"
 
 -- LSP
 lvim.lsp.diagnostics.virtual_text = false
@@ -50,10 +50,8 @@ lvim.builtin.treesitter.rainbow = {
   disable = { "html" },
 }
 
-
 -- local actions = require "telescope.actions"
 -- lvim.builtin.telescope.defaults.mappings.i["<C-j>"] = actions.move_selection_next
-
 
 vim.cmd [[ au CmdWinEnter * quit ]]
 -- TODO: q quits in spectr_panel ft
