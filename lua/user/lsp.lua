@@ -1,5 +1,5 @@
 lvim.format_on_save = false
-lvim.lsp.diagnostics.virtual_text = true
+lvim.lsp.diagnostics.virtual_text = false
 
 -- if you don't want all the parsers change this to a table of the ones you want
 lvim.builtin.treesitter.ensure_installed = {
