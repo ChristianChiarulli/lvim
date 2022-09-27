@@ -1,6 +1,7 @@
 require "user.plugins"
 require "user.options"
 require "user.keymaps"
+require "user.autocommands"
 require "user.lsp"
 require "user.dap-ui"
 require "user.neoscroll"
