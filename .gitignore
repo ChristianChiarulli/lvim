@@ -39,10 +39,6 @@ luac.out
 *.x86_64
 *.hex
 
-# LunarVim
-plugin/
 
-spell/en.utf-8.add.spl
-
-lua/profile.lua
-java/
+java
+plugin
