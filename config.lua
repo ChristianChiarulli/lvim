@@ -15,4 +15,6 @@ require "user.lab"
 require "user.git"
 require "user.zen-mode"
 require "user.inlay-hints"
+require "user.whichkey"
+require "user.telescope"
 
