@@ -9,7 +9,10 @@ lvim.builtin.nvimtree.setup.renderer.icons.show.git = false
 lvim.builtin.breadcrumbs.active = true
 lvim.builtin.treesitter.highlight.enabled = true
 lvim.builtin.dap.active = true
+lvim.builtin.cmp.completion = { completion = { completeopt = 'menu,menuone, noinsert'} }
 vim.opt.showtabline = 0
+lvim.colorscheme = "tokyonight"
+
 
 local options = {
   backup = false,                          -- creates a backup file
@@ -42,7 +45,7 @@ local options = {
   laststatus = 3,
   showcmd = false,
   ruler = false,
-  relativenumber = false,                   -- set relative numbered lines
+  relativenumber = true,                   -- set relative numbered lines
   numberwidth = 4,                         -- set number column width to 2 {default 4}
   signcolumn = "yes",                      -- always show the sign column, otherwise it would shift the text each time
   wrap = false,                            -- display lines as one long line

@@ -1,7 +1,6 @@
 lvim.builtin.which_key.mappings["b"] = { "<cmd>Telescope buffers<cr>", "Buffers" }
 lvim.builtin.which_key.mappings["v"] = { "<cmd>vsplit<cr>", "vsplit" }
 lvim.builtin.which_key.mappings["h"] = { "<cmd>nohlsearch<cr>", "nohl" }
-lvim.builtin.which_key.mappings["w"] = { "<cmd>w<CR>", "Write" }
 lvim.builtin.which_key.mappings["q"] = { '<cmd>lua require("user.functions").smart_quit()<CR>', "Quit" }
 lvim.builtin.which_key.mappings["/"] = { '<cmd>lua require("Comment.api").toggle.linewise.current()<CR>', "Comment" }
 lvim.builtin.which_key.mappings["c"] = { "<cmd>Bdelete!<CR>", "Close Buffer" }
@@ -43,7 +42,7 @@ lvim.builtin.which_key.mappings["f"] = {
 }
 lvim.builtin.which_key.mappings["g"] = {
 	name = "Git",
-	g = "Lazygit",
+  g = { "<cmd>lua require 'lvim.core.terminal'.lazygit_toggle(12000)<cr>", "Lazygit" },
 	j = { "<cmd>lua require 'gitsigns'.next_hunk()<cr>", "Next Hunk" },
 	k = { "<cmd>lua require 'gitsigns'.prev_hunk()<cr>", "Prev Hunk" },
 	l = { "<cmd>GitBlameToggle<cr>", "Blame" },
@@ -113,6 +112,7 @@ lvim.builtin.which_key.mappings[";"] = nil
 lvim.builtin.which_key.mappings["c"] = nil
 lvim.builtin.which_key.mappings["L"] = nil
 lvim.builtin.which_key.mappings["s"] = nil
+lvim.builtin.which_key.mappings["w"] = nil
 
 local m_opts = {
 	mode = "n", -- NORMAL mode

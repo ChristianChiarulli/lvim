@@ -23,7 +23,10 @@ lvim.plugins = {
   "mattn/vim-gist",
   "mattn/webapi-vim",
   "folke/zen-mode.nvim",
-  "lvimuser/lsp-inlayhints.nvim"
+  "lvimuser/lsp-inlayhints.nvim",
+  "lunarvim/templeos.nvim",
+  "lunarvim/darkplus.nvim",
+  "nvim-treesitter/playground",
 
   -- https://github.com/jose-elias-alvarez/typescript.nvim
   -- "rmagatti/auto-session",
