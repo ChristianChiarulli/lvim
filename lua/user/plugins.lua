@@ -1,5 +1,6 @@
 -- Additional Plugins
 lvim.plugins = {
+  "nvim-treesitter/playground",
   "mfussenegger/nvim-jdtls",
   "rcarriga/nvim-dap-ui",
   "karb94/neoscroll.nvim",
@@ -24,9 +25,8 @@ lvim.plugins = {
   "mattn/webapi-vim",
   "folke/zen-mode.nvim",
   "lvimuser/lsp-inlayhints.nvim",
-  "lunarvim/templeos.nvim",
   "lunarvim/darkplus.nvim",
-  "nvim-treesitter/playground",
+  "lunarvim/templeos.nvim",
 
   -- https://github.com/jose-elias-alvarez/typescript.nvim
   -- "rmagatti/auto-session",
