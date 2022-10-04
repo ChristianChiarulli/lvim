@@ -2,7 +2,6 @@
 lvim.plugins = {
   "nvim-treesitter/playground",
   "mfussenegger/nvim-jdtls",
-  "rcarriga/nvim-dap-ui",
   "karb94/neoscroll.nvim",
   "j-hui/fidget.nvim",
   "windwp/nvim-ts-autotag",
