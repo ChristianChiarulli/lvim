@@ -17,4 +17,5 @@ require "user.zen-mode"
 require "user.inlay-hints"
 require "user.whichkey"
 require "user.telescope"
+require "user.bqf"
 
