@@ -13,11 +13,6 @@ lvim.plugins = {
 	"moll/vim-bbye",
 	"folke/todo-comments.nvim",
 	"windwp/nvim-spectre",
-	"is0n/jaq-nvim",
-	{
-		"0x100101/lab.nvim",
-		run = "cd js && npm ci",
-	},
 	"f-person/git-blame.nvim",
 	"ruifm/gitlinker.nvim",
 	"mattn/vim-gist",
@@ -27,6 +22,30 @@ lvim.plugins = {
 	"lunarvim/darkplus.nvim",
 	"lunarvim/templeos.nvim",
 	"kevinhwang91/nvim-bqf",
+	"is0n/jaq-nvim",
+  "hrsh7th/cmp-emoji",
+  "TimUntersberger/neogit",
+	{
+		"0x100101/lab.nvim",
+		run = "cd js && npm ci",
+	},
+	{ "tzachar/cmp-tabnine", run = "./install.sh" },
+	{
+		"zbirenbaum/copilot.lua",
+		event = { "VimEnter" },
+		config = function()
+			vim.defer_fn(function()
+				require("copilot").setup()
+			end, 100)
+		end,
+	},
+	{
+		"zbirenbaum/copilot-cmp",
+		after = { "copilot.lua" },
+		config = function()
+			require("copilot_cmp").setup()
+		end,
+	},
 
 	-- https://github.com/jose-elias-alvarez/typescript.nvim
 	-- "rmagatti/auto-session",

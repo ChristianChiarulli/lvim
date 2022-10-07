@@ -42,7 +42,7 @@ lvim.builtin.which_key.mappings["f"] = {
 }
 lvim.builtin.which_key.mappings["g"] = {
 	name = "Git",
-  g = { "<cmd>lua require 'lvim.core.terminal'.lazygit_toggle(12000)<cr>", "Lazygit" },
+	g = { "<cmd>lua require 'lvim.core.terminal'.lazygit_toggle(12000)<cr>", "Lazygit" },
 	j = { "<cmd>lua require 'gitsigns'.next_hunk()<cr>", "Next Hunk" },
 	k = { "<cmd>lua require 'gitsigns'.prev_hunk()<cr>", "Prev Hunk" },
 	l = { "<cmd>GitBlameToggle<cr>", "Blame" },
@@ -74,7 +74,8 @@ lvim.builtin.which_key.mappings["g"] = {
 lvim.builtin.which_key.mappings["l"] = {
 	name = "LSP",
 	a = { "<cmd>lua vim.lsp.buf.code_action()<cr>", "Code Action" },
-	c = { "<cmd>lua require('user.lsp').server_capabilities()<cr>", "Get Capabilities" },
+	c = { "<cmd>lua require('copilot.suggestion').toggle_auto_trigger()<cr>", "Get Capabilities" },
+	-- c = { "<cmd>lua require('user.lsp').server_capabilities()<cr>", "Get Capabilities" },
 	d = { "<cmd>TroubleToggle<cr>", "Diagnostics" },
 	w = {
 		"<cmd>Telescope lsp_workspace_diagnostics<cr>",

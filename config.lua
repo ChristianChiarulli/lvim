@@ -1,21 +1,20 @@
-require "user.plugins"
-require "user.options"
-require "user.keymaps"
-require "user.autocommands"
-require "user.lsp"
-require "user.neoscroll"
-require "user.fidget"
-require "user.harpoon"
-require "user.cybu"
-require "user.surround"
-require "user.bookmark"
-require "user.todo-comments"
-require "user.jaq"
-require "user.lab"
-require "user.git"
-require "user.zen-mode"
-require "user.inlay-hints"
-require "user.whichkey"
-require "user.telescope"
-require "user.bqf"
-
+require("user.plugins")
+require("user.options")
+require("user.keymaps")
+require("user.autocommands")
+require("user.lsp")
+require("user.neoscroll")
+require("user.fidget")
+require("user.harpoon")
+require("user.cybu")
+require("user.surround")
+require("user.bookmark")
+require("user.todo-comments")
+require("user.jaq")
+require("user.lab")
+require("user.git")
+require("user.zen-mode")
+require("user.inlay-hints")
+require("user.whichkey")
+require("user.telescope")
+require("user.bqf")
