@@ -19,4 +19,3 @@ require("user.whichkey")
 require("user.telescope")
 require("user.bqf")
 require("user.dial")
-local h = "happy"
