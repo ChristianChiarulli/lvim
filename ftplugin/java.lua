@@ -129,6 +129,16 @@ local config = {
 			},
 			configuration = {
 				updateBuildConfiguration = "interactive",
+				runtimes = {
+					{
+						name = "JavaSE-11",
+						path = "~/.sdkman/candidates/java/11.0.2-open",
+					},
+					{
+						name = "JavaSE-18",
+						path = "~/.sdkman/candidates/java/18.0.1.1-open",
+					},
+				},
 			},
 			maven = {
 				downloadSources = true,
@@ -186,17 +196,6 @@ local config = {
 		allow_incremental_sync = true,
 	},
 
-	runtime = {
-		{
-			name = "JavaSE-11",
-			path = "~/.sdkman/candidates/java/11.0.2-open",
-		},
-		{
-			name = "JavaSE-18",
-			path = "~/.sdkman/candidates/java/18.0.1.1-open",
-		},
-	},
-
 	-- Language server `initializationOptions`
 	-- You need to extend the `bundles` with paths to jar files
 	-- if you want to use additional eclipse.jdt.ls plugins.
@@ -211,15 +210,26 @@ local config = {
 }
 
 config["on_attach"] = function(client, bufnr)
+	local _, _ = pcall(vim.lsp.codelens.refresh)
 	require("jdtls.dap").setup_dap_main_class_configs()
 	require("jdtls").setup_dap({ hotcodereplace = "auto" })
 	require("lvim.lsp").on_attach(client, bufnr)
 end
 
+vim.api.nvim_create_autocmd({ "BufWritePost" }, {
+	pattern = { "*.java" },
+	callback = function()
+		local _, _ = pcall(vim.lsp.codelens.refresh)
+	end,
+})
+
 -- This starts a new client & server,
 -- or attaches to an existing client & server depending on the `root_dir`.
 jdtls.start_or_attach(config)
 
+vim.cmd(
+	[[command! -buffer -nargs=? -complete=custom,v:lua.require'jdtls'._complete_set_runtime JdtSetRuntime lua require('jdtls').set_runtime(<f-args>)]]
+)
 -- vim.cmd "command! -buffer -nargs=? -complete=custom,v:lua.require'jdtls'._complete_compile JdtCompile lua require('jdtls').compile(<f-args>)"
 -- vim.cmd "command! -buffer -nargs=? -complete=custom,v:lua.require'jdtls'._complete_set_runtime JdtSetRuntime lua require('jdtls').set_runtime(<f-args>)"
 -- vim.cmd "command! -buffer JdtUpdateConfig lua require('jdtls').update_project_config()"
