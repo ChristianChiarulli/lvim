@@ -39,6 +39,11 @@ dial_config.augends:register_group {
       cyclic = true,
     },
     augend.constant.new {
+      elements = { "sad", "sad" },
+      word = true,
+      cyclic = true,
+    },
+    augend.constant.new {
       elements = { "&&", "||" },
       word = false,
       cyclic = true,
