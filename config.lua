@@ -18,3 +18,5 @@ require("user.inlay-hints")
 require("user.whichkey")
 require("user.telescope")
 require("user.bqf")
+require("user.dial")
+

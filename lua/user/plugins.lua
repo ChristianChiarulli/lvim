@@ -25,6 +25,7 @@ lvim.plugins = {
 	"is0n/jaq-nvim",
   "hrsh7th/cmp-emoji",
   "TimUntersberger/neogit",
+  "monaqa/dial.nvim",
 	{
 		"0x100101/lab.nvim",
 		run = "cd js && npm ci",
