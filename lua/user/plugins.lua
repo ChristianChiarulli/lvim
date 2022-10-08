@@ -23,8 +23,9 @@ lvim.plugins = {
 	"lunarvim/templeos.nvim",
 	"kevinhwang91/nvim-bqf",
 	"is0n/jaq-nvim",
-  "hrsh7th/cmp-emoji",
-  "TimUntersberger/neogit",
+	"hrsh7th/cmp-emoji",
+	"TimUntersberger/neogit",
+	{ "christianchiarulli/telescope-tabs", branch = "chris" },
 	{
 		"0x100101/lab.nvim",
 		run = "cd js && npm ci",

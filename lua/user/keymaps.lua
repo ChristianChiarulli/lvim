@@ -18,9 +18,9 @@ keymap("n", "<m-l>", "<C-w>l", opts)
 keymap("n", "<m-tab>", "<c-6>", opts)
 
 -- Tabs --
--- keymap("n", "<m-t>", ":tabnew %<cr>", opts)
-keymap("n", "<m-y>", ":tabclose<cr>", opts)
-keymap("n", "<m-\\>", ":tabonly<cr>", opts)
+-- keymap("n", "\\", ":tabnew %<cr>", opts)
+-- keymap("n", "<s-\\>", ":tabclose<cr>", opts)
+-- keymap("n", "<s-\\>", ":tabonly<cr>", opts)
 
 -- Resize with arrows
 keymap("n", "<C-Up>", ":resize -2<CR>", opts)

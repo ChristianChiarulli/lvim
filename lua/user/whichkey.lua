@@ -57,6 +57,7 @@ lvim.builtin.which_key.mappings["g"] = {
 	o = { "<cmd>Telescope git_status<cr>", "Open changed file" },
 	b = { "<cmd>Telescope git_branches<cr>", "Checkout branch" },
 	c = { "<cmd>Telescope git_commits<cr>", "Checkout commit" },
+	f = { "<cmd>Telescope git_bcommits<cr>", "Checkout buffer commit" },
 	d = {
 		"<cmd>Gitsigns diffthis HEAD<cr>",
 		"Diff",
@@ -109,6 +110,17 @@ lvim.builtin.which_key.mappings["l"] = {
 	t = { '<cmd>lua require("user.functions").toggle_diagnostics()<cr>', "Toggle Diagnostics" },
 	u = { "<cmd>LuaSnipUnlinkCurrent<cr>", "Unlink Snippet" },
 }
+lvim.builtin.which_key.mappings["t"] = {
+	name = "Tab",
+	t = {
+		"<cmd>lua require('telescope').extensions['telescope-tabs'].list_tabs(require('telescope.themes').get_dropdown{previewer = false, initial_mode='normal', prompt_title='Tabs'})<cr>",
+		"Find Tab",
+	},
+	n = { "<cmd>tabnew %<cr>", "New Tab" },
+	c = { "<cmd>tabclose<cr>", "Close Tab" },
+	o = { "<cmd>tabonly<cr>", "Only Tab" },
+}
+
 lvim.builtin.which_key.mappings[";"] = nil
 lvim.builtin.which_key.mappings["c"] = nil
 lvim.builtin.which_key.mappings["L"] = nil
