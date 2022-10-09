@@ -24,6 +24,8 @@ lvim.plugins = {
   "kevinhwang91/nvim-bqf",
   "is0n/jaq-nvim",
   "hrsh7th/cmp-emoji",
+  "ggandor/leap.nvim",
+  "nacro90/numb.nvim",
   "TimUntersberger/neogit",
   { "christianchiarulli/telescope-tabs", branch = "chris" },
   "monaqa/dial.nvim",
