@@ -10,9 +10,8 @@ lvim.builtin.nvimtree.setup.renderer.icons.show.git = false
 lvim.builtin.breadcrumbs.active = true
 lvim.builtin.treesitter.highlight.enabled = true
 lvim.builtin.dap.active = true
-lvim.builtin.cmp.completion = { completion = { completeopt = 'menu,menuone, noinsert'} }
+lvim.builtin.cmp.cmdline.enable = false
 vim.opt.showtabline = 0
-lvim.colorscheme = "tokyonight"
 
 
 local options = {
