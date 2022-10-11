@@ -45,7 +45,6 @@ lvim.plugins = {
   { "tzachar/cmp-tabnine", run = "./install.sh" },
   {
     "zbirenbaum/copilot.lua",
-    -- commit = "814e2339e1ed97831f2dddf55f3d93c9dc709f19",
     event = { "VimEnter" },
     config = function()
       vim.defer_fn(function()
