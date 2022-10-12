@@ -4,11 +4,11 @@ neogit.setup {
   disable_signs = false,
   disable_hint = true,
   disable_context_highlighting = false,
-  disable_commit_confirmation = false,
+  disable_commit_confirmation = true,
   -- Neogit refreshes its internal state after specific events, which can be expensive depending on the repository size.
   -- Disabling `auto_refresh` will make it so you have to manually refresh the status after you open it.
   auto_refresh = true,
-  disable_builtin_notifications = true,
+  disable_builtin_notifications = false,
   use_magit_keybindings = false,
   -- Change the default way of opening neogit
   kind = "tab",
@@ -28,19 +28,7 @@ neogit.setup {
     hunk = { "", "" },
   },
   integrations = {
-    -- Neogit only provides inline diffs. If you want a more traditional way to look at diffs, you can use `sindrets/diffview.nvim`.
-    -- The diffview integration enables the diff popup, which is a wrapper around `sindrets/diffview.nvim`.
-    --
-    -- Requires you to have `sindrets/diffview.nvim` installed.
-    -- use {
-    --   'TimUntersberger/neogit',
-    --   requires = {
-    --     'nvim-lua/plenary.nvim',
-    --     'sindrets/diffview.nvim'
-    --   }
-    -- }
-    --
-    diffview = false,
+    diffview = true,
   },
   -- Setting any section to `false` will make the section not render at all
   sections = {
@@ -78,7 +66,6 @@ neogit.setup {
       ["<tab>"] = "Toggle",
       ["x"] = "Discard",
       ["s"] = "Stage",
-      ["<space>"] = "Stage",
       ["a"] = "StageUnstaged",
       ["<c-s>"] = "StageAll",
       ["u"] = "Unstage",
@@ -100,6 +87,7 @@ neogit.setup {
       ["L"] = "LogPopup",
       ["Z"] = "StashPopup",
       ["b"] = "BranchPopup",
+      -- ["<space>"] = "Stage",
       -- Removes the default mapping of "s"
       -- ["s"] = "",
     },

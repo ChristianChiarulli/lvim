@@ -1,3 +1,7 @@
+require("user.lsp.languages.rust")
+require("user.lsp.languages.go")
+require("user.lsp.languages.python")
+
 lvim.format_on_save = false
 lvim.lsp.diagnostics.virtual_text = false
 

@@ -28,6 +28,24 @@ lvim.plugins = {
   "ggandor/leap.nvim",
   "nacro90/numb.nvim",
   "TimUntersberger/neogit",
+  "sindrets/diffview.nvim",
+  "simrat39/rust-tools.nvim",
+  "olexsmir/gopher.nvim",
+  "leoluz/nvim-dap-go",
+  "mfussenegger/nvim-dap-python",
+  {
+    "saecki/crates.nvim",
+    tag = "v0.3.0",
+    requires = { "nvim-lua/plenary.nvim" },
+    config = function()
+      require("crates").setup {
+        null_ls = {
+          enabled = true,
+          name = "crates.nvim",
+        },
+      }
+    end,
+  },
   {
     "jinh0/eyeliner.nvim",
     config = function()
