@@ -61,5 +61,3 @@ if not dap_ok then
 end
 
 dapgo.setup()
-
-lvim.builtin.which_key.mappings["dT"] = { "<cmd>lua require('dap-go').debug_test()<cr>", "Debug Test" }
