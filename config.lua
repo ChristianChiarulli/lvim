@@ -22,4 +22,3 @@ require("user.dial")
 require("user.numb")
 require("user.treesitter")
 require("user.neogit")
-
