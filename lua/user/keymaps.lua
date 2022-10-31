@@ -17,6 +17,18 @@ keymap("n", "<m-k>", "<C-w>k", opts)
 keymap("n", "<m-l>", "<C-w>l", opts)
 keymap("n", "<m-tab>", "<c-6>", opts)
 
+function _G.set_terminal_keymaps()
+  local opts = { noremap = true }
+  -- vim.api.nvim_buf_set_keymap(0, 't', '<esc>', [[<C-\><C-n>]], opts)
+  -- vim.api.nvim_buf_set_keymap(0, "t", "jk", [[<C-\><C-n>]], opts)
+  vim.api.nvim_buf_set_keymap(0, "t", "<m-h>", [[<C-\><C-n><C-W>h]], opts)
+  vim.api.nvim_buf_set_keymap(0, "t", "<m-j>", [[<C-\><C-n><C-W>j]], opts)
+  vim.api.nvim_buf_set_keymap(0, "t", "<m-k>", [[<C-\><C-n><C-W>k]], opts)
+  vim.api.nvim_buf_set_keymap(0, "t", "<m-l>", [[<C-\><C-n><C-W>l]], opts)
+end
+
+vim.cmd "autocmd! TermOpen term://* lua set_terminal_keymaps()"
+
 -- Tabs --
 -- keymap("n", "\\", ":tabnew %<cr>", opts)
 -- keymap("n", "\\", ":tabnew %<cr>", opts)
