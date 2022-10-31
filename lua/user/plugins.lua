@@ -85,7 +85,7 @@ lvim.plugins = {
 	"MunifTanjim/nui.nvim",
 	{
 		"folke/noice.nvim",
-		event = "BufWinEnter",
+		event = "VimEnter",
 		config = function()
 			require("noice").setup()
 		end,
