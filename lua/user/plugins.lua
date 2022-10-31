@@ -65,7 +65,7 @@ lvim.plugins = {
 	{ "tzachar/cmp-tabnine", run = "./install.sh" },
 	{
 		"zbirenbaum/copilot.lua",
-		event = { "VimEnter" },
+		-- event = { "VimEnter" },
 		config = function()
 			vim.defer_fn(function()
 				require("copilot").setup({
@@ -83,13 +83,13 @@ lvim.plugins = {
 	},
 	-- Packer
 	"MunifTanjim/nui.nvim",
-	-- {
---		"folke/noice.nvim",
---		event = "VimEnter",
---		config = function()
---			require("noice").setup()
---		end,
---	},
+	{
+		"folke/noice.nvim",
+		event = "BufWinEnter",
+		config = function()
+			require("noice").setup()
+		end,
+	},
 
 	-- https://github.com/jose-elias-alvarez/typescript.nvim
 	-- "rmagatti/auto-session",
