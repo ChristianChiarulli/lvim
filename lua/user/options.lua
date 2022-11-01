@@ -12,7 +12,6 @@ lvim.builtin.dap.active = true
 lvim.builtin.cmp.cmdline.enable = false
 vim.opt.showtabline = 0
 
-
 local options = {
 	backup = false, -- creates a backup file
 	clipboard = "unnamedplus", -- allows neovim to access the system clipboard

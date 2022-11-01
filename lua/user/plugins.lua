@@ -2,6 +2,7 @@
 lvim.plugins = {
 	"nvim-treesitter/playground",
 	"nvim-treesitter/nvim-treesitter-textobjects",
+  "p00f/nvim-ts-rainbow",
 	"mfussenegger/nvim-jdtls",
 	"karb94/neoscroll.nvim",
 	-- "j-hui/fidget.nvim",

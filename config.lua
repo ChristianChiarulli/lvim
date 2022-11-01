@@ -24,4 +24,5 @@ reload("user.treesitter")
 reload("user.neogit")
 reload("user.colorizer")
 reload("user.lualine")
+reload("user.icons")
 
