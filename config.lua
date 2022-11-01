@@ -1,3 +1,4 @@
+lvim.colorscheme = "darkplus"
 reload("user.plugins")
 reload("user.options")
 reload("user.keymaps")
@@ -22,3 +23,5 @@ reload("user.numb")
 reload("user.treesitter")
 reload("user.neogit")
 reload("user.colorizer")
+reload("user.lualine")
+
