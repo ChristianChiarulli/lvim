@@ -3,13 +3,15 @@ if lvim.colorscheme == "darkplus" then
 		enable = true,
 		extended_mode = false,
 		colors = {
-			"Orchid",
 			"DodgerBlue",
+			"Orchid",
 			"Gold",
 		},
 		disable = { "html" },
 	}
 end
+
+lvim.builtin.treesitter.ensure_installed = "all"
 
 lvim.builtin.treesitter.textobjects = {
 	select = {
