@@ -39,6 +39,8 @@ lvim.plugins = {
   "jose-elias-alvarez/typescript.nvim",
   "mxsdev/nvim-dap-vscode-js",
   "petertriho/nvim-scrollbar",
+  "renerocksai/telekasten.nvim",
+  "renerocksai/calendar-vim",
   {
     "saecki/crates.nvim",
     tag = "v0.3.0",
