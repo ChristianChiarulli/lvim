@@ -2,6 +2,7 @@ lvim.colorscheme = "darkplus"
 lvim.log.level = "warn"
 lvim.builtin.alpha.active = true
 lvim.lsp.diagnostics.float.focusable = true
+lvim.reload_config_on_save =  false
 lvim.builtin.illuminate.active = false
 lvim.builtin.bufferline.active = false
 lvim.builtin.alpha.mode = "dashboard"
@@ -30,6 +31,7 @@ lvim.builtin.cmp.formatting.source_names = {
   copilot = "",
   treesitter = "",
 }
+-- lvim.builtin.autopairs.active = false
 -- vim.g.netrw_browse_split = 0
 -- vim.g.netrw_banner = 0
 -- vim.g.netrw_winsize = 25
