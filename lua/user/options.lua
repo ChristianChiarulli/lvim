@@ -12,6 +12,7 @@ lvim.builtin.nvimtree.setup.renderer.icons.show.git = false
 lvim.builtin.breadcrumbs.active = true
 lvim.builtin.treesitter.highlight.enabled = true
 lvim.builtin.dap.active = true
+lvim.keys.term_mode = { ["<C-l>"] = false }
 lvim.builtin.cmp.cmdline.enable = false
 lvim.builtin.cmp.window.documentation = false
 lvim.builtin.cmp.window.completion = {
