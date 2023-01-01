@@ -1,4 +1,4 @@
-require("scrollbar").setup({
+require("scrollbar").setup {
   show = true,
   show_in_active_only = false,
   set_highlights = true,
@@ -92,7 +92,8 @@ require("scrollbar").setup({
     "TelescopePrompt",
     "noice",
     "alpha",
-    "NvimTree"
+    "NvimTree",
+    "",
   },
   autocmd = {
     render = {
@@ -119,4 +120,4 @@ require("scrollbar").setup({
     handle = true,
     search = false, -- Requires hlslens
   },
-})
+}

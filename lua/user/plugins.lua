@@ -1,6 +1,7 @@
 -- Additional Plugins
 lvim.plugins = {
   "ellisonleao/gruvbox.nvim",
+  "lunarvim/github.nvim",
   "nvim-treesitter/playground",
   "nvim-treesitter/nvim-treesitter-textobjects",
   "p00f/nvim-ts-rainbow",
