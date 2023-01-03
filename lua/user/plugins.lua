@@ -8,8 +8,8 @@ lvim.plugins = {
   "mfussenegger/nvim-jdtls",
   -- "karb94/neoscroll.nvim",
   "opalmay/vim-smoothie",
-  -- "j-hui/fidget.nvim",
-  "windwp/nvim-ts-autotag",
+  "j-hui/fidget.nvim",
+  "christianchiarulli/nvim-ts-autotag",
   "kylechui/nvim-surround",
   "christianchiarulli/harpoon",
   "MattesGroeger/vim-bookmarks",
@@ -52,6 +52,15 @@ lvim.plugins = {
           enabled = true,
           name = "crates.nvim",
         },
+      }
+    end,
+  },
+    "MunifTanjim/nui.nvim",
+  {
+    "jackMort/ChatGPT.nvim",
+    config = function()
+      require("chatgpt").setup {
+        -- optional configuration
       }
     end,
   },
