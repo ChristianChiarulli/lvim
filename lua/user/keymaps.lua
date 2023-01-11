@@ -54,8 +54,8 @@ keymap("n", "g#", "g#zz", opts)
 keymap("v", "<", "<gv", opts)
 keymap("v", ">", ">gv", opts)
 
-keymap("v", "p", '"_dP', opts)
--- keymap("v", "P", '"_dP', opts)
+keymap("v", "p", '"_dp', opts)
+keymap("v", "P", '"_dP', opts)
 
 keymap("n", "Q", "<cmd>Bdelete!<CR>", opts)
 

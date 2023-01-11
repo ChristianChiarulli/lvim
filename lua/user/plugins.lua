@@ -1,6 +1,7 @@
 -- Additional Plugins
 lvim.plugins = {
   "ellisonleao/gruvbox.nvim",
+  "LunarVim/synthwave84.nvim",
   "lunarvim/github.nvim",
   "nvim-treesitter/playground",
   "nvim-treesitter/nvim-treesitter-textobjects",
@@ -41,11 +42,11 @@ lvim.plugins = {
   "mxsdev/nvim-dap-vscode-js",
   "petertriho/nvim-scrollbar",
   "renerocksai/telekasten.nvim",
-  "renerocksai/calendar-vim",
+  -- "renerocksai/calendar-vim",
   {
     "saecki/crates.nvim",
-    tag = "v0.3.0",
-    requires = { "nvim-lua/plenary.nvim" },
+    version = "v0.3.0",
+    dependencies = { "nvim-lua/plenary.nvim" },
     config = function()
       require("crates").setup {
         null_ls = {
@@ -55,15 +56,8 @@ lvim.plugins = {
       }
     end,
   },
-    "MunifTanjim/nui.nvim",
-  {
-    "jackMort/ChatGPT.nvim",
-    config = function()
-      require("chatgpt").setup {
-        -- optional configuration
-      }
-    end,
-  },
+  "MunifTanjim/nui.nvim",
+  "jackMort/ChatGPT.nvim",
   {
     "jinh0/eyeliner.nvim",
     config = function()
@@ -76,9 +70,9 @@ lvim.plugins = {
   "monaqa/dial.nvim",
   {
     "0x100101/lab.nvim",
-    run = "cd js && npm ci",
+    build = "cd js && npm ci",
   },
-  { "tzachar/cmp-tabnine", run = "./install.sh" },
+  { "tzachar/cmp-tabnine", build = "./install.sh" },
   {
     "zbirenbaum/copilot.lua",
     -- event = { "VimEnter" },

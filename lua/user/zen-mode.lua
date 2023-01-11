@@ -28,7 +28,7 @@ zen_mode.setup {
     require("lsp-inlayhints").toggle()
     lvim.builtin.cmp.active = false
     lvim.builtin.breadcrumbs.active = false
-    vim.cmd [[LspStop]]
+    -- vim.cmd [[LspStop]]
     -- local status_ok, _ = pcall(vim.api.nvim_set_option_value, "winbar", nil, { scope = "local" })
     -- if not status_ok then
     --   return
@@ -38,7 +38,7 @@ zen_mode.setup {
     require("lsp-inlayhints").toggle()
     lvim.builtin.breadcrumbs.active = true
     lvim.builtin.cmp.active = true
-    vim.cmd [[LspStart]]
+    -- vim.cmd [[LspStart]]
     -- require("user.winbar").create_winbar()
   end,
 }
