@@ -18,7 +18,7 @@ require("typescript").setup {
         inlayHints = {
           includeInlayEnumMemberValueHints = true,
           includeInlayFunctionLikeReturnTypeHints = true,
-          includeInlayFunctionParameterTypeHints = true,
+          includeInlayFunctionParameterTypeHints = false,
           includeInlayParameterNameHints = "all", -- 'none' | 'literals' | 'all';
           includeInlayParameterNameHintsWhenArgumentMatchesName = true,
           includeInlayPropertyDeclarationTypeHints = true,
