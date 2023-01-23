@@ -1,4 +1,4 @@
-local home = vim.fn.expand("~/Notes")
+local home = vim.fn.expand("~/notes")
 -- NOTE for Windows users:
 -- - don't use Windows
 -- - try WSL2 on Windows and pretend you're on Linux
@@ -15,7 +15,7 @@ require('telekasten').setup({
     -- weeklies     = home .. '/' .. 'weekly',
     templates    = home .. '/' .. 'templates',
 
-    image_subdir = "images",
+    image_subdir = "img",
     extension    = ".md",
 
     -- Generate note filenames. One of:
@@ -69,7 +69,7 @@ require('telekasten').setup({
         -- use monday as first day of week: 1 .. true, 0 .. false
         calendar_monday = 1,
         -- calendar mark: where to put mark for marked days: 'left', 'right', 'left-fit'
-        calendar_mark = 'left-fit',
+        calendar_mark = 'right',
     },
 
     -- telescope actions behavior

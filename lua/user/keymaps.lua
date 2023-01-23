@@ -32,6 +32,9 @@ vim.cmd "autocmd! TermOpen term://* lua set_terminal_keymaps()"
 -- keymap("n", "<s-\\>", ":tabclose<cr>", opts)
 -- keymap("n", "<s-\\>", ":tabonly<cr>", opts)
 
+-- Quick Exit Insert Mode
+keymap("i", "jk", "<esc>", opts)
+
 -- Resize with arrows
 keymap("n", "<C-Up>", ":resize -2<CR>", opts)
 keymap("n", "<C-Down>", ":resize +2<CR>", opts)
@@ -60,8 +63,7 @@ keymap("v", "P", '"_dP', opts)
 keymap("n", "Q", "<cmd>Bdelete!<CR>", opts)
 
 keymap(
-  "n",
-  "<F6>",
+  "n", "<F6>",
   [[:echo "hi<" . synIDattr(synID(line("."),col("."),1),"name") . '> trans<' . synIDattr(synID(line("."),col("."),0),"name") . "> lo<" . synIDattr(synIDtrans(synID(line("."),col("."),1)),"name") . ">" . " FG:" . synIDattr(synIDtrans(synID(line("."),col("."),1)),"fg#")<CR>]],
   opts
 )
@@ -98,6 +100,9 @@ vim.cmd [[
 ]]
 
 keymap("n", "<m-q>", ":call QuickFixToggle()<cr>", opts)
+
+-- Project
+keymap("n", "<c-p>", "<cmd>Telescope projects<cr>", opts)
 
 M.show_documentation = function()
   local filetype = vim.bo.filetype

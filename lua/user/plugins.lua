@@ -43,7 +43,7 @@ lvim.plugins = {
   "mxsdev/nvim-dap-vscode-js",
   "petertriho/nvim-scrollbar",
   "renerocksai/telekasten.nvim",
-  -- "renerocksai/calendar-vim",
+  "renerocksai/calendar-vim",
   {
     "saecki/crates.nvim",
     version = "v0.3.0",
