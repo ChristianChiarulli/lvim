@@ -5,6 +5,7 @@ lvim.lsp.diagnostics.float.focusable = true
 lvim.reload_config_on_save = false
 lvim.builtin.illuminate.active = false
 lvim.builtin.bufferline.active = false
+vim.g.indent_blankline_char = "▏"
 lvim.builtin.alpha.mode = "dashboard"
 lvim.builtin.terminal.active = true
 lvim.builtin.nvimtree.setup.view.side = "left"
@@ -37,9 +38,9 @@ lvim.builtin.cmp.formatting.source_names = {
   copilot = "",
   treesitter = "",
 }
-lvim.builtin.cmp.formatting = {
-    format = require("tailwindcss-colorizer-cmp").formatter
-}
+-- lvim.builtin.cmp.formatting = {
+--     format = require("tailwindcss-colorizer-cmp").formatter
+-- }
 -- lvim.builtin.autopairs.active = false
 -- vim.g.netrw_browse_split = 0
 -- vim.g.netrw_banner = 0
