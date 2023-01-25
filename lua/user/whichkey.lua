@@ -96,7 +96,7 @@ lvim.builtin.which_key.mappings["l"] = {
   i = { "<cmd>LspInfo<cr>", "Info" },
   h = { "<cmd>lua require('lsp-inlayhints').toggle()<cr>", "Toggle Hints" },
   H = { "<cmd>IlluminationToggle<cr>", "Toggle Doc HL" },
-  I = { "<cmd>LspInstallInfo<cr>", "Installer Info" },
+  I = { "<cmd>Mason<cr>", "Installer Info" },
   j = {
     "<cmd>lua vim.diagnostic.goto_next({buffer=0})<CR>",
     "Next Diagnostic",

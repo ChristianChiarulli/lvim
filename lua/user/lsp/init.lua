@@ -21,7 +21,7 @@ formatters.setup {
   { command = "clang-format", filetypes = { "java" } },
   { command = "stylua", filetypes = { "lua" } },
   { command = "shfmt", filetypes = { "sh", "zsh" } },
-  { command = "prettier", filetypes = { "css" } },
+  { command = "prettierd", filetypes = { "css" } },
 }
 
 -- lvim.lsp.on_attach_callback = function(client, bufnr)
