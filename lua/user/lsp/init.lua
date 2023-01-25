@@ -5,6 +5,7 @@ require "user.lsp.languages.js-ts"
 require "user.lsp.languages.sh"
 require "user.lsp.languages.emmet"
 require "user.lsp.languages.css"
+require 'user.lsp.languages.markdown'
 
 lvim.lsp.diagnostics.virtual_text = false
 
