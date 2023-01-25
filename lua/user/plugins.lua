@@ -5,6 +5,7 @@ lvim.plugins = {
   "roobert/tailwindcss-colorizer-cmp.nvim",
   "lunarvim/github.nvim",
   "EdenEast/nightfox.nvim",
+  "tyrannicaltoucan/vim-quantum",
   -- "nvim-treesitter/playground",
   "nvim-treesitter/nvim-treesitter-textobjects",
   "christianchiarulli/nvim-ts-rainbow",

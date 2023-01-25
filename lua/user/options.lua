@@ -1,4 +1,5 @@
-lvim.colorscheme = "carbonfox"
+lvim.colorscheme = "quantum"
+vim.g.quantum_black = 1
 lvim.log.level = "warn"
 lvim.builtin.alpha.active = true
 lvim.lsp.diagnostics.float.focusable = true
@@ -49,6 +50,7 @@ vim.opt.showtabline = 0
 
 local options = {
   backup = false, -- creates a backup file
+  -- background = "dark",
   clipboard = "unnamedplus", -- allows neovim to access the system clipboard
   cmdheight = 1, -- more space in the neovim command line for displaying messages
   completeopt = { "menuone", "noselect" }, -- mostly just for cmp

@@ -24,6 +24,8 @@ formatters.setup {
   { command = "prettierd", filetypes = { "css" } },
 }
 
+require 'luasnip'.filetype_extend("telekasten", { "markdown"})
+
 -- lvim.lsp.on_attach_callback = function(client, bufnr)
 -- end
 
