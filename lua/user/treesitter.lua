@@ -1,15 +1,15 @@
-if lvim.colorscheme == "darkplus" then
-  lvim.builtin.treesitter.rainbow = {
-    enable = true,
-    extended_mode = false,
-    colors = {
-      "DodgerBlue",
-      "Orchid",
-      "Gold",
-    },
-    disable = { "html" },
-  }
-end
+-- if lvim.colorscheme == "darkplus" then
+--   lvim.builtin.treesitter.rainbow = {
+--     enable = true,
+--     extended_mode = false,
+--     colors = {
+--       "DodgerBlue",
+--       "Orchid",
+--       "Gold",
+--     },
+--     disable = { "html" },
+--   }
+-- end
 
 lvim.builtin.treesitter.ensure_installed = { "javascript" }
 lvim.builtin.treesitter.autotag.enable = true
