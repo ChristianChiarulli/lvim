@@ -41,6 +41,7 @@ luac.out
 
 
 java
+.env
 
 plugin/packer_compiled.lua
 lazy-lock.json

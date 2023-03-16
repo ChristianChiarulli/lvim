@@ -2,10 +2,10 @@
 lvim.plugins = {
   "ellisonleao/gruvbox.nvim",
   "LunarVim/synthwave84.nvim",
-  "roobert/tailwindcss-colorizer-cmp.nvim",
+  "igorgue/danger",
+  -- "roobert/tailwindcss-colorizer-cmp.nvim",
   "lunarvim/github.nvim",
   "EdenEast/nightfox.nvim",
-  "tyrannicaltoucan/vim-quantum",
   -- "nvim-treesitter/playground",
   "nvim-treesitter/nvim-treesitter-textobjects",
   "christianchiarulli/nvim-ts-rainbow",
@@ -46,29 +46,35 @@ lvim.plugins = {
   -- "petertriho/nvim-scrollbar",
   "renerocksai/telekasten.nvim",
   "renerocksai/calendar-vim",
-  -- {
-  --   "saecki/crates.nvim",
-  --   version = "v0.3.0",
-  --   dependencies = { "nvim-lua/plenary.nvim" },
-  --   config = function()
-  --     require("crates").setup {
-  --       null_ls = {
-  --         enabled = true,
-  --         name = "crates.nvim",
-  --       },
-  --     }
-  --   end,
-  -- },
+  {
+    "iamcco/markdown-preview.nvim",
+    build = "cd app && npm install",
+    init = function() vim.g.mkdp_filetypes = { "markdown", "telekasten" } end,
+    ft = { "markdown", "telekasten" }
+  },
+  {
+    "saecki/crates.nvim",
+    version = "v0.3.0",
+    dependencies = { "nvim-lua/plenary.nvim" },
+    config = function()
+      require("crates").setup {
+        null_ls = {
+          enabled = true,
+          name = "crates.nvim",
+        },
+      }
+    end,
+  },
   "MunifTanjim/nui.nvim",
-  -- "jackMort/ChatGPT.nvim",
-  -- {
-  --   "jinh0/eyeliner.nvim",
-  --   config = function()
-  --     require("eyeliner").setup {
-  --       highlight_on_key = true,
-  --     }
-  --   end,
-  -- },
+  "jackMort/ChatGPT.nvim",
+  {
+    "jinh0/eyeliner.nvim",
+    config = function()
+      require("eyeliner").setup {
+        highlight_on_key = true,
+      }
+    end,
+  },
   { "christianchiarulli/telescope-tabs", branch = "chris" },
   "monaqa/dial.nvim",
   -- {

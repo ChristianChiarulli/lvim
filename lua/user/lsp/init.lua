@@ -21,10 +21,11 @@ formatters.setup {
   { command = "clang-format", filetypes = { "java" } },
   { command = "stylua", filetypes = { "lua" } },
   { command = "shfmt", filetypes = { "sh", "zsh" } },
-  { command = "prettierd", filetypes = { "css" } },
 }
 
 require 'luasnip'.filetype_extend("telekasten", { "markdown"})
+
+-- require 'luasnip/loaders/from_vscode'.load { paths = "~/.config/lvim/snippets"}
 
 -- lvim.lsp.on_attach_callback = function(client, bufnr)
 -- end

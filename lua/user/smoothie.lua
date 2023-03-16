@@ -54,3 +54,4 @@ vim.g.smoothie_speed_constant_factor=15
 vim.g.smoothie_speed_linear_factor=15
 -- g:smoothie_speed_exponentiation_factor: (default: 0.9) This value controls exponent of the power function in the velocity curve. Generally should be less or equal to 1.0. Lower values produce longer but perceivably smoother animation.
 -- g:smoothie_redraw_at_finish: Force screen redraw when the animation is finished, which clears sporadic display artifacts which I encountered f.ex. when scrolling through buffers containing emoji. Enabled by default only if both editor and terminal (kitty) supports doing this in a glitch-free way.
+vim.g.smoothie_redraw_at_finish=true

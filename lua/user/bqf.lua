@@ -4,7 +4,7 @@ local opts = {
   auto_resize_height = false,
   preview = {
     auto_preview = false,
-    show_title = true,
+    -- show_title = true,
     delay_syntax = 50,
     wrap = false,
   },

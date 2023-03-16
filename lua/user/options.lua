@@ -1,4 +1,7 @@
-lvim.colorscheme = "quantum"
+-- vim.opt.title = false
+vim.o.termguicolors = true
+vim.o.title = false
+lvim.colorscheme = "carbonfox"
 vim.g.quantum_black = 1
 lvim.log.level = "warn"
 lvim.builtin.alpha.active = true
@@ -87,10 +90,11 @@ local options = {
   scrolloff = 0,
   sidescrolloff = 8,
   guifont = "monospace:h17", -- the font used in graphical neovim applications
-  title = true,
-  -- colorcolumn = "80",
+  -- title = true,
+ --  colorcolumn = "999999999999999",
   -- colorcolumn = "120",
 }
+vim.diagnostic.hide()
 -- vim.g.loaded_netrw = 1
 -- vim.g.loaded_netrwPlugin = 1
 -- vim.opt.fillchars.eob = " "
