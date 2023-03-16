@@ -24,7 +24,9 @@ reload "user.treesitter"
 reload "user.neogit"
 reload "user.colorizer"
 reload "user.lualine"
+
 -- reload "user.scrollbar"
 reload "user.zk"
 -- reload "user.chatgpt"
+
 reload "user.whichkey"

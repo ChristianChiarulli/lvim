@@ -8,7 +8,7 @@ lvim.plugins = {
   "EdenEast/nightfox.nvim",
   -- "nvim-treesitter/playground",
   "nvim-treesitter/nvim-treesitter-textobjects",
-  "christianchiarulli/nvim-ts-rainbow",
+  -- "christianchiarulli/nvim-ts-rainbow",
   "mfussenegger/nvim-jdtls",
   -- "karb94/neoscroll.nvim",
   "opalmay/vim-smoothie",
@@ -82,6 +82,7 @@ lvim.plugins = {
   --   build = "cd js && npm ci",
   -- },
   { "tzachar/cmp-tabnine", build = "./install.sh" },
+
   {
     "zbirenbaum/copilot.lua",
     -- event = { "VimEnter" },
