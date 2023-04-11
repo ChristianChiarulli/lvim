@@ -11,12 +11,15 @@ lvim.builtin.which_key.mappings["r"] = {
   w = { "<cmd>lua require('spectre').open_visual({select_word=true})<cr>", "Replace Word" },
   f = { "<cmd>lua require('spectre').open_file_search()<cr>", "Replace Buffer" },
 }
-lvim.builtin.which_key.mappings["c"] = {
-  name = "ChatGPT",
-  c = { "<cmd>ChatGPT<cr>", "Chat" },
-  a = { "<cmd>ChatGPTActAs<cr>", "Act As" },
-  e = { "<cmd>ChatGPTEditWithInstructions<cr>", "Edit" },
-  r = { "<cmd>ChatRunCustomCodeAction<cr>", "Code Action" },
+lvim.builtin.which_key.mappings["a"] = {
+  name = "A.I.",
+  c = { "<cmd>ChatGPT<cr>", "ChatGPT" },
+  a = { "<cmd>ChatGPTActAs<cr>", "Act As GPT" },
+  e = { "<cmd>ChatGPTEditWithInstructions<cr>", "Edit GPT" },
+  r = { "<cmd>ChatRunCustomCodeAction<cr>", "Code Action GPT" },
+  s = { "<cmd>Copilot suggestion<cr>", "Toggle Copilot Suggestion" },
+  p = { "<cmd>Copilot panel<cr>", "Toggle Copilot Panel" },
+  t = { "<cmd>Copilot toggle<cr>", "Toggle Copilot" },
 }
 lvim.builtin.which_key.mappings["d"] = {
   name = "Debug",

@@ -1,5 +1,7 @@
 -- Additional Plugins
 lvim.plugins = {
+  "olivercederborg/poimandres.nvim",
+  "bluz71/vim-moonfly-colors",
   "ellisonleao/gruvbox.nvim",
   "LunarVim/synthwave84.nvim",
   "roobert/tailwindcss-colorizer-cmp.nvim",
@@ -73,28 +75,22 @@ lvim.plugins = {
     "0x100101/lab.nvim",
     build = "cd js && npm ci",
   },
-  -- { "tzachar/cmp-tabnine", build = "./install.sh" },
   {
     "zbirenbaum/copilot.lua",
-    -- event = { "VimEnter" },
-    config = function()
-      vim.defer_fn(function()
-        require("copilot").setup {
-          plugin_manager_path = os.getenv "LUNARVIM_RUNTIME_DIR" .. "/site/pack/packer",
-        }
-      end, 100)
-    end,
+    -- cmd = "Copilot",
+    event = "InsertEnter",
   },
   {
     "zbirenbaum/copilot-cmp",
     after = { "copilot.lua" },
     config = function()
-      require("copilot_cmp").setup {
-        formatters = {
-          insert_text = require("copilot_cmp.format").remove_existing,
-        },
-      }
+      require("copilot_cmp").setup()
     end,
+  },
+  {
+    "tzachar/cmp-tabnine",
+    event = "InsertEnter",
+    build = "./install.sh",
   },
   -- "MunifTanjim/nui.nvim",
   -- {
