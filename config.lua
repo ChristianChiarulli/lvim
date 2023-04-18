@@ -28,6 +28,7 @@ reload "user.scrollbar"
 reload "user.copilot"
 reload "user.chatgpt"
 reload "user.whichkey"
+reload "user.neoai"
 -- lvim.builtin.cmp.formatting.source_names["copilot"] = "(Copilot)"table.insert(lvim.builtin.cmp.sources, 1, { name = "copilot" })
 
 -- write a function that counts to 10
