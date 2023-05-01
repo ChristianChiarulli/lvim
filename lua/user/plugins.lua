@@ -1,8 +1,10 @@
 -- Additional Plugins
 lvim.plugins = {
   "olivercederborg/poimandres.nvim",
+  "AckslD/swenv.nvim",
   "bluz71/vim-moonfly-colors",
   "ellisonleao/gruvbox.nvim",
+  "lunarvim/onedarker.nvim",
   "LunarVim/synthwave84.nvim",
   "roobert/tailwindcss-colorizer-cmp.nvim",
   "lunarvim/github.nvim",
