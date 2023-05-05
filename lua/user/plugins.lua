@@ -1,18 +1,14 @@
 -- Additional Plugins
 lvim.plugins = {
-  "olivercederborg/poimandres.nvim",
+  "stevearc/dressing.nvim",
   "AckslD/swenv.nvim",
-  "bluz71/vim-moonfly-colors",
-  "ellisonleao/gruvbox.nvim",
   "lunarvim/onedarker.nvim",
   "LunarVim/synthwave84.nvim",
   "roobert/tailwindcss-colorizer-cmp.nvim",
   "lunarvim/github.nvim",
   "nvim-treesitter/playground",
   "nvim-treesitter/nvim-treesitter-textobjects",
-  -- "christianchiarulli/nvim-ts-rainbow",
   "mfussenegger/nvim-jdtls",
-  -- "karb94/neoscroll.nvim",
   "opalmay/vim-smoothie",
   "j-hui/fidget.nvim",
   "christianchiarulli/nvim-ts-autotag",
@@ -97,6 +93,9 @@ lvim.plugins = {
 
   "MunifTanjim/nui.nvim",
   "Bryley/neoai.nvim",
+  "mfussenegger/nvim-dap-python",
+  "nvim-neotest/neotest",
+  "nvim-neotest/neotest-python",
   -- {
   --   "folke/noice.nvim",
   --   event = "VimEnter",
@@ -108,4 +107,6 @@ lvim.plugins = {
   -- https://github.com/jose-elias-alvarez/typescript.nvim
   -- "rmagatti/auto-session",
   -- "rmagatti/session-lens"
+  -- "christianchiarulli/nvim-ts-rainbow",
+  -- "karb94/neoscroll.nvim",
 }

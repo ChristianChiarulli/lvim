@@ -2,7 +2,7 @@
 -- lvim.colorscheme = "poimandres"
 lvim.log.level = "warn"
 lvim.builtin.alpha.active = true
-lvim.lsp.diagnostics.float.focusable = true
+-- lvim.lsp.diagnostics.float.focusable = true
 lvim.reload_config_on_save = false
 lvim.builtin.illuminate.active = false
 lvim.builtin.bufferline.active = false
