@@ -1,5 +1,8 @@
 -- Additional Plugins
 lvim.plugins = {
+
+  "ChristianChiarulli/onedark.nvim",
+  -- { "christianchiarulli/tabnine-nvim", build = "./dl_binaries.sh", branch = "suggestion_hl_group" },
   "stevearc/dressing.nvim",
   "AckslD/swenv.nvim",
   "lunarvim/onedarker.nvim",
@@ -75,7 +78,7 @@ lvim.plugins = {
   },
   {
     "zbirenbaum/copilot.lua",
-    -- cmd = "Copilot",
+    cmd = "Copilot",
     event = "InsertEnter",
   },
   {
@@ -85,11 +88,11 @@ lvim.plugins = {
       require("copilot_cmp").setup()
     end,
   },
-  {
-    "tzachar/cmp-tabnine",
-    event = "InsertEnter",
-    build = "./install.sh",
-  },
+  -- {
+  --   "tzachar/cmp-tabnine",
+  --   event = "BufRead",
+  --   build = "./install.sh",
+  -- },
 
   "MunifTanjim/nui.nvim",
   "Bryley/neoai.nvim",

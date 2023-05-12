@@ -1,6 +1,7 @@
 lvim.builtin.which_key.mappings["b"] = { "<cmd>Telescope buffers<cr>", "Buffers" }
 lvim.builtin.which_key.mappings["v"] = { "<cmd>vsplit<cr>", "vsplit" }
 lvim.builtin.which_key.mappings["h"] = { "<cmd>nohlsearch<cr>", "nohl" }
+lvim.builtin.which_key.mappings["o"] = { "<cmd>AerialToggle!<cr>", "Outline" }
 lvim.builtin.which_key.mappings["q"] = { '<cmd>lua require("user.functions").smart_quit()<CR>', "Quit" }
 lvim.builtin.which_key.mappings["/"] = { '<cmd>lua require("Comment.api").toggle.linewise.current()<CR>', "Comment" }
 -- lvim.builtin.which_key.mappings["c"] = { "<cmd>Bdelete!<CR>", "Close Buffer" }
@@ -133,16 +134,16 @@ lvim.builtin.which_key.mappings["t"] = {
   o = { "<cmd>tabonly<cr>", "Only Tab" },
 }
 -- lvim.builtin.cmp.enabled = false
-lvim.builtin.which_key.mappings["o"] = {
-  name = "Options",
-  c = { "<cmd>lua lvim.builtin.cmp.active = false<cr>", "Completion off" },
-  C = { "<cmd>lua lvim.builtin.cmp.active = true<cr>", "Completion on" },
-  -- w = { '<cmd>lua require("user.functions").toggle_option("wrap")<cr>', "Wrap" },
-  -- r = { '<cmd>lua require("user.functions").toggle_option("relativenumber")<cr>', "Relative" },
-  -- l = { '<cmd>lua require("user.functions").toggle_option("cursorline")<cr>', "Cursorline" },
-  -- s = { '<cmd>lua require("user.functions").toggle_option("spell")<cr>', "Spell" },
-  -- t = { '<cmd>lua require("user.functions").toggle_tabline()<cr>', "Tabline" },
-}
+-- lvim.builtin.which_key.mappings["o"] = {
+--   name = "Options",
+--   c = { "<cmd>lua lvim.builtin.cmp.active = false<cr>", "Completion off" },
+--   C = { "<cmd>lua lvim.builtin.cmp.active = true<cr>", "Completion on" },
+--   -- w = { '<cmd>lua require("user.functions").toggle_option("wrap")<cr>', "Wrap" },
+--   -- r = { '<cmd>lua require("user.functions").toggle_option("relativenumber")<cr>', "Relative" },
+--   -- l = { '<cmd>lua require("user.functions").toggle_option("cursorline")<cr>', "Cursorline" },
+--   -- s = { '<cmd>lua require("user.functions").toggle_option("spell")<cr>', "Spell" },
+--   -- t = { '<cmd>lua require("user.functions").toggle_tabline()<cr>', "Tabline" },
+-- }
 
 lvim.builtin.which_key.mappings["n"] = {
   name = "Notes",
