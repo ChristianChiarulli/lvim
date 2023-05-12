@@ -180,6 +180,8 @@ lvim.builtin.telescope.pickers.lsp_implementations = {
   initial_mode = "normal",
 }
 
+lvim.builtin.telescope.defaults.selection_caret = "  "
+
 require("telescope-tabs").setup {
   show_preview = false,
   close_tab_shortcut = "C-d",
