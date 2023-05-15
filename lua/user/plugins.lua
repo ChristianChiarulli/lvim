@@ -4,8 +4,8 @@ lvim.plugins = {
   -- {
   --   dir = "/Users/chris/Repos/bookmark.nvim",
   -- },
-  "ChristianChiarulli/bookmark.nvim",
-
+  "kkharji/sqlite.lua",
+  { url = "git@github.com:ChristianChiarulli/bookmark.nvim.git" },
   { url = "git@github.com:ChristianChiarulli/onedark.nvim.git" },
   -- { "christianchiarulli/tabnine-nvim", build = "./dl_binaries.sh", branch = "suggestion_hl_group" },
   "stevearc/dressing.nvim",

@@ -32,3 +32,5 @@ reload "user.cmp"
 reload "user.nvimtree"
 reload "nostr"
 reload "user.autocommands"
+local test = reload "user.sqtest"
+lvim.builtin.which_key.mappings["."] = { '<cmd>lua require("user.sqtest").get_bookmarks()<CR>', "Comment" }

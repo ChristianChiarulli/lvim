@@ -45,3 +45,4 @@ java
 plugin/packer_compiled.lua
 lazy-lock.json
 rplugin/node/nvim-example
+test_db

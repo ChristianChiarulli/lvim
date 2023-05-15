@@ -14,7 +14,8 @@ copilot.setup {
     },
   },
   suggestion = {
-    auto_trigger = false,
+    enabled = true,
+    auto_trigger = true,
     keymap = {
       accept = "<c-l>",
       next = "<c-j>",
