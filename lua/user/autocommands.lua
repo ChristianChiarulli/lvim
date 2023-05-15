@@ -62,7 +62,7 @@ vim.api.nvim_create_autocmd({ "BufEnter", "BufWinEnter", "BufEnter" }, {
   end,
 })
 
-vim.api.nvim_create_autocmd({ "BufEnter", "AlphaClosed", "BufRead" }, {
+vim.api.nvim_create_autocmd({ "BufEnter" }, {
   pattern = { "" },
   callback = function()
     local get_project_dir = function()
@@ -75,18 +75,18 @@ vim.api.nvim_create_autocmd({ "BufEnter", "AlphaClosed", "BufRead" }, {
   end,
 })
 
-vim.cmd [[
-" autocmd FileType toggleterm nnoremap <buffer> <CR> :startinsert<CR>
-  autocmd BufEnter * if &filetype ==# 'toggleterm' | startinsert! | endif
-]]
+-- vim.cmd [[
+-- " autocmd FileType toggleterm nnoremap <buffer> <CR> :startinsert<CR>
+--   autocmd BufEnter * if &filetype ==# 'toggleterm' | startinsert! | endif
+-- ]]
 
-vim.api.nvim_create_autocmd({ "BufEnter" }, {
-  pattern = { "term://*" },
-  callback = function()
-    vim.cmd "startinsert"
-    -- vim.cmd "set cmdheight=1"
-  end,
-})
+-- vim.api.nvim_create_autocmd({ "BufEnter" }, {
+--   pattern = { "term://*" },
+--   callback = function()
+--     vim.cmd "startinsert"
+--     -- vim.cmd "set cmdheight=1"
+--   end,
+-- })
 
 vim.api.nvim_create_autocmd({ "FileType" }, {
   pattern = { "gitcommit", "markdown" },
