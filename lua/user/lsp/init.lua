@@ -6,7 +6,7 @@ local formatters = require "lvim.lsp.null-ls.formatters"
 formatters.setup {
   { command = "stylua", filetypes = { "lua" } },
   { command = "shfmt", filetypes = { "sh", "zsh" } },
-  { command = "prettier", filetypes = { "css" } },
+  { command = "prettier", filetypes = { "css", "javascript" } },
 }
 
 -- lvim.lsp.on_attach_callback = function(client, bufnr)
