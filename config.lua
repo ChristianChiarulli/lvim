@@ -32,3 +32,5 @@ reload "user.neoai"
 reload "user.cmp"
 reload "user.nvimtree"
 reload "nostr"
+
+lvim.builtin.nvimtree.setup.view.centralize_selection = true

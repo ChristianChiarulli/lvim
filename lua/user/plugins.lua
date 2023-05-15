@@ -1,7 +1,12 @@
 -- Additional Plugins
 lvim.plugins = {
 
-  "ChristianChiarulli/onedark.nvim",
+  -- {
+  --   dir = "/Users/chris/Repos/bookmark.nvim",
+  -- },
+  "ChristianChiarulli/bookmark.nvim",
+
+  { url = "git@github.com:ChristianChiarulli/onedark.nvim.git" },
   -- { "christianchiarulli/tabnine-nvim", build = "./dl_binaries.sh", branch = "suggestion_hl_group" },
   "stevearc/dressing.nvim",
   "AckslD/swenv.nvim",
@@ -14,7 +19,7 @@ lvim.plugins = {
   "christianchiarulli/nvim-ts-autotag",
   "kylechui/nvim-surround",
   "christianchiarulli/harpoon",
-  "MattesGroeger/vim-bookmarks",
+  -- "MattesGroeger/vim-bookmarks",
   "NvChad/nvim-colorizer.lua",
   "moll/vim-bbye",
   "folke/todo-comments.nvim",

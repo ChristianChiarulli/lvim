@@ -11,7 +11,7 @@ local pyright_opts = {
   settings = {
     pyright = {
       disableLanguageServices = false,
-      disableOrganizeImports = false
+      disableOrganizeImports = false,
     },
     python = {
       analysis = {
@@ -19,9 +19,9 @@ local pyright_opts = {
         autoSearchPaths = true,
         diagnosticMode = "workspace", -- openFilesOnly, workspace
         typeCheckingMode = "basic", -- off, basic, strict
-        useLibraryCodeForTypes = true
-      }
-    }
+        useLibraryCodeForTypes = true,
+      },
+    },
   },
 }
 
@@ -29,11 +29,11 @@ require("lvim.lsp.manager").setup("pyright", pyright_opts)
 
 -- setup formatting
 local formatters = require "lvim.lsp.null-ls.formatters"
-formatters.setup { { name = "black" }, }
+formatters.setup { { name = "black" } }
 -- lvim.format_on_save.pattern = { "*.py" }
 
 local linters = require "lvim.lsp.null-ls.linters"
--- linters.setup { { command = "flake8", filetypes = { "python" } } }
+linters.setup { { command = "flake8", args = { "--ignore=E203,E501" }, filetypes = { "python" } } }
 
 local opts = {
   mode = "n", -- NORMAL mode
@@ -52,9 +52,9 @@ pcall(function()
 end)
 
 -- setup testing
-require("neotest").setup({
+require("neotest").setup {
   adapters = {
-    require("neotest-python")({
+    require "neotest-python" {
       -- Extra arguments for nvim-dap configuration
       -- See https://github.com/microsoft/debugpy/wiki/Debug-configuration-settings for values
       dap = {
@@ -63,9 +63,9 @@ require("neotest").setup({
       },
       args = { "--log-level", "DEBUG", "--quiet" },
       runner = "pytest",
-    })
-  }
-})
+    },
+  },
+}
 
 local mappings = {
   C = {

@@ -59,6 +59,7 @@ local options = {
   sidescrolloff = 8,
   guifont = "monospace:h17", -- the font used in graphical neovim applications
   title = true,
+  titleold = vim.split(os.getenv("SHELL") or "", "/")[3] ,
   -- colorcolumn = "80",
   -- colorcolumn = "120",
 }
