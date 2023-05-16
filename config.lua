@@ -33,6 +33,13 @@ reload "user.nvimtree"
 reload "nostr"
 reload "user.autocommands"
 -- reload "user.sqtest"
-require "user.sqtest2"
+-- require "user.sqtest2"
 -- reload "user.dbee"
 -- lvim.builtin.which_key.mappings["."] = { '<cmd>lua require("user.sqtest2").get_bookmarks()<CR>', "Comment" }
+
+lvim.builtin.breadcrumbs.options.separator = "  "
+
+lvim.builtin.which_key.mappings["."] = {
+  '<cmd>lua require("bookmark.datastore").get_bookmarks()<CR>',
+  "Comment",
+}
