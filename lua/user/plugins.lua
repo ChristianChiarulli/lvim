@@ -1,9 +1,14 @@
 -- Additional Plugins
 lvim.plugins = {
-
   -- {
   --   dir = "/Users/chris/Repos/bookmark.nvim",
   -- },
+  {
+    "kndndrj/nvim-dbee",
+    build = function()
+      require("dbee").install()
+    end,
+  },
   "kkharji/sqlite.lua",
   { url = "git@github.com:ChristianChiarulli/bookmark.nvim.git" },
   { url = "git@github.com:ChristianChiarulli/onedark.nvim.git" },
@@ -99,7 +104,6 @@ lvim.plugins = {
     "hrsh7th/cmp-emoji",
     event = "BufRead",
   },
-
   -- "folke/noice.nvim",
   -- "rcarriga/nvim-notify",
 

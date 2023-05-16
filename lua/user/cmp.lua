@@ -15,9 +15,10 @@ lvim.builtin.cmp.window = {
     winhighlight = "Normal:Pmenu,FloatBorder:FloatBorder,Search:None",
   },
 }
-vim.opt.pumblend = 3
+vim.opt.pumblend = 10
 
 lvim.builtin.cmp.formatting.source_names = {}
+
 
 lvim.builtin.cmp.sources[2].entry_filter = function(entry, ctx)
   local kind = require("cmp.types.lsp").CompletionItemKind[entry:get_kind()]
