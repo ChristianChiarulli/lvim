@@ -90,9 +90,22 @@ if lvim.colorscheme == "onedark" then
     diagnostics,
   }
 
+  local function location()
+    local line = vim.fn.line "."
+    local col = vim.fn.virtcol "."
+    return string.format("Ln %d,Col %d", line, col)
+  end
+
   lvim.builtin.lualine.sections.lualine_x = {
+    location,
+  }
+  lvim.builtin.lualine.sections.lualine_y = {
     components.spaces,
     copilot,
     filetype,
+  }
+
+  lvim.builtin.lualine.sections.lualine_z = {
+    components.progress,
   }
 end

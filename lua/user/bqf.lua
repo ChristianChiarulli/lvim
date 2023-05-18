@@ -22,7 +22,8 @@ local opts = {
     prevhist = "<",
     nexthist = ">",
     sclear = "c",
-    ptoggleauto = "p",
+    ptoggleitem = "p",
+    ptoggleauto = "a",
     ptogglemode = "P",
   },
 }
