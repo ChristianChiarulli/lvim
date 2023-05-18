@@ -32,7 +32,7 @@ reload "user.cmp"
 reload "user.nvimtree"
 reload "nostr"
 reload "user.autocommands"
-require'bookmark.datastore'
+-- require'bookmark'
 -- reload "user.sqtest"
 -- require "user.sqtest2"
 -- reload "user.dbee"

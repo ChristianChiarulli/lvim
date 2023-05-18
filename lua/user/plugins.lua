@@ -3,6 +3,7 @@ lvim.plugins = {
   -- {
   --   dir = "/Users/chris/Repos/bookmark.nvim",
   -- },
+  "lunarvim/synthwave84.nvim",
   {
     "kndndrj/nvim-dbee",
     build = function()
