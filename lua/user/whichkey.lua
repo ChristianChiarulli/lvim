@@ -1,3 +1,6 @@
+lvim.builtin.which_key.setup.plugins.presets["operators"] = false
+lvim.builtin.which_key.setup.ignore_missing = true
+
 lvim.builtin.which_key.mappings["b"] = { "<cmd>Telescope buffers<cr>", "Buffers" }
 lvim.builtin.which_key.mappings["v"] = { "<cmd>vsplit<cr>", "vsplit" }
 lvim.builtin.which_key.mappings["h"] = { "<cmd>nohlsearch<cr>", "nohl" }
@@ -183,7 +186,7 @@ local m_mappings = {
   c = { "<cmd>BookmarkClear<cr>", "Clear" },
   l = { "<cmd>BookmarkList<cr>", "List" },
   f = { "<cmd>FilemarkToggle<cr>", "Mark File" },
-  -- h = { '<cmd>lua require("harpoon.mark").add_file()<cr>', "Harpoon" },
+  h = { '<cmd>lua require("harpoon.mark").add_file()<cr>', "Harpoon" },
   -- ["."] = { '<cmd>lua require("harpoon.ui").nav_next()<cr>', "Harpoon Next" },
   -- [","] = { '<cmd>lua require("harpoon.ui").nav_prev()<cr>', "Harpoon Prev" },
   -- l = { "<cmd>lua require('user.bfs').open()<cr>", "Buffers" },

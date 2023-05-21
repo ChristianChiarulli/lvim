@@ -22,7 +22,7 @@ lvim.plugins = {
   "mfussenegger/nvim-jdtls",
   "opalmay/vim-smoothie",
   "j-hui/fidget.nvim",
-  "christianchiarulli/nvim-ts-autotag",
+  "windwp/nvim-ts-autotag",
   "kylechui/nvim-surround",
   "christianchiarulli/harpoon",
   -- "MattesGroeger/vim-bookmarks",

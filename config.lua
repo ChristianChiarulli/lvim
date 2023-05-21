@@ -4,6 +4,8 @@ reload "user.keymaps"
 reload "user.lsp"
 reload "user.smoothie"
 reload "user.harpoon"
+reload "user.autocommands"
+reload "user.webdev-icons"
 reload "user.cybu"
 reload "user.neotest"
 reload "user.surround"
@@ -31,10 +33,18 @@ reload "user.neoai"
 reload "user.cmp"
 reload "user.nvimtree"
 reload "nostr"
-reload "user.autocommands"
--- require'bookmark'
--- reload "user.sqtest"
--- require "user.sqtest2"
--- reload "user.dbee"
--- lvim.builtin.which_key.mappings["."] = { '<cmd>lua require("user.sqtest2").get_bookmarks()<CR>', "Comment" }
-lvim.builtin.breadcrumbs.options.separator = "  "
+reload "user.astro-tools"
+
+function RunAstroSync()
+  local command = 'astro sync'
+  local handle = io.popen(command)
+  local output = handle:read('*a')
+  handle:close()
+
+  if vim.v.job_info[handle].status ~= 0 then
+    vim.api.nvim_err_writeln('Error running astro sync:')
+    vim.api.nvim_err_writeln(output)
+  else
+    print('Astro sync completed successfully!')
+  end
+end

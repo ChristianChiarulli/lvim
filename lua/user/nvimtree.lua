@@ -14,16 +14,16 @@ local function my_on_attach(bufnr)
   vim.keymap.set("n", "<S-k>", api.node.open.preview, opts "Open Preview")
 end
 
-lvim.builtin.lir.icon = ""
+-- lvim.builtin.lir.icon = ""
 
 lvim.builtin.nvimtree.setup.on_attach = my_on_attach
 lvim.builtin.nvimtree.setup.view.centralize_selection = true
 lvim.builtin.nvimtree.setup.renderer.icons.glyphs.folder.arrow_open = ""
 lvim.builtin.nvimtree.setup.renderer.icons.glyphs.folder.arrow_closed = ""
-lvim.builtin.nvimtree.setup.renderer.icons.glyphs.folder.open = ""
-lvim.builtin.nvimtree.setup.renderer.icons.glyphs.folder.default = ""
-lvim.builtin.nvimtree.setup.renderer.icons.glyphs.folder.empty = ""
-lvim.builtin.nvimtree.setup.renderer.icons.glyphs.folder.symlink = ""
+-- lvim.builtin.nvimtree.setup.renderer.icons.glyphs.folder.open = ""
+-- lvim.builtin.nvimtree.setup.renderer.icons.glyphs.folder.default = ""
+-- lvim.builtin.nvimtree.setup.renderer.icons.glyphs.folder.empty = ""
+-- lvim.builtin.nvimtree.setup.renderer.icons.glyphs.folder.symlink = ""
 lvim.builtin.nvimtree.setup.view.centralize_selection = true
 -- lvim.builtin.nvimtree.setup.view.cursor = false
 
