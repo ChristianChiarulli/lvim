@@ -1,8 +1,14 @@
 -- Additional Plugins
 lvim.plugins = {
+  {
+    "mawkler/modicator.nvim",
+    event = "ColorScheme",
+  },
+  "HiPhish/nvim-ts-rainbow2",
   -- {
   --   dir = "/Users/chris/Repos/bookmark.nvim",
   -- },
+  "andymass/vim-matchup",
   "lunarvim/synthwave84.nvim",
   {
     "kndndrj/nvim-dbee",
@@ -13,6 +19,7 @@ lvim.plugins = {
   "kkharji/sqlite.lua",
   { url = "git@github.com:ChristianChiarulli/bookmark.nvim.git" },
   { url = "git@github.com:ChristianChiarulli/onedark.nvim.git" },
+  { url = "git@github.com:LunarVim/primer.nvim.git" },
   -- { "christianchiarulli/tabnine-nvim", build = "./dl_binaries.sh", branch = "suggestion_hl_group" },
   "stevearc/dressing.nvim",
   "AckslD/swenv.nvim",
@@ -35,7 +42,10 @@ lvim.plugins = {
   "mattn/vim-gist",
   "mattn/webapi-vim",
   "folke/zen-mode.nvim",
-  "lvimuser/lsp-inlayhints.nvim",
+  {
+    "lvimuser/lsp-inlayhints.nvim",
+    branch = "anticonceal",
+  },
   "lunarvim/darkplus.nvim",
   "kevinhwang91/nvim-bqf",
   "is0n/jaq-nvim",

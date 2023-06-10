@@ -20,8 +20,8 @@ if lvim.colorscheme == "darkplus" then
   lvim.builtin.lualine.sections.lualine_b = { branch }
 end
 
-if lvim.colorscheme == "onedark" then
-  lvim.builtin.lualine.options.theme = "onedark_gray"
+if lvim.colorscheme == "primer_dark" then
+  lvim.builtin.lualine.options.theme = "primer_dark"
 
   local diagnostics = {
     "diagnostics",
