@@ -28,10 +28,10 @@ lvim.builtin.treesitter.rainbow = {
     "TSRainbowBlue",
     -- "TSRainbowOrange",
     -- "TSRainbowCoral",
-    -- "TSRainbowPink",
+    "TSRainbowPink",
     "TSRainbowYellow",
     -- "TSRainbowViolet",
-    "TSRainbowGreen",
+    -- "TSRainbowGreen",
   },
 }
 

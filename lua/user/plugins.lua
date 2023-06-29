@@ -28,7 +28,10 @@ lvim.plugins = {
   "nvim-treesitter/nvim-treesitter-textobjects",
   "mfussenegger/nvim-jdtls",
   "opalmay/vim-smoothie",
-  "j-hui/fidget.nvim",
+  {
+    "j-hui/fidget.nvim",
+    branch = "legacy",
+  },
   "windwp/nvim-ts-autotag",
   "kylechui/nvim-surround",
   "christianchiarulli/harpoon",
@@ -115,6 +118,7 @@ lvim.plugins = {
     "hrsh7th/cmp-emoji",
     event = "BufRead",
   },
+  "ThePrimeagen/vim-be-good",
   -- "folke/noice.nvim",
   -- "rcarriga/nvim-notify",
 
